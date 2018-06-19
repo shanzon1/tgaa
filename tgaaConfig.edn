@@ -1,0 +1,8 @@
+{
+:numAnts 10
+:numTrails 10
+:maxPathLength 10
+:minPathLength 10
+:thresholdType "L"
+:placementHeuristic 0.2
+}
