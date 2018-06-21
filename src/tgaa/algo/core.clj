@@ -7,6 +7,5 @@
 (defn process-image [] 
   (let [image ^BufferedImage (image-RGB-gray (get-image))
         workingImage ^BufferedImage (BufferedImage. (. image getWidth) (. image getHeight) (. image getType) )
-        bootstrapThresh (bootstrap-value image)  
-        ]
+        bootstrapThresh (bootstrap-value image)]
     bootstrapThresh))

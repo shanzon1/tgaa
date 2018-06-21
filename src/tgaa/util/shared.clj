@@ -1,7 +1,8 @@
 (ns tgaa.util.shared)
 
 (def session (atom {:trialNum 0
-                    :imageLocation "C:\\Users\\erudi\\OneDrive\\Activity Organizer\\Projects\\Active\\TAA Research\\Project Resources\\images\\unprocessed\\3\\1\\3_1_1.jpg"}))
+                    :imageLocation "C:\\Users\\erudi\\OneDrive\\Activity Organizer\\Projects\\Active\\TAA Research\\Project Resources\\images\\unprocessed\\3\\1\\3_1_1.jpg"
+                    :canPaths []}))
 
 (defn get-config "Gets Configuration set in text file" [& qualified-path] 
   (if (= (first qualified-path) nil) 

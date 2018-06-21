@@ -1,5 +1,6 @@
 (ns tgaa.util.image
-  (:require [tgaa.util.shared :refer [session config]])
+  (:require [tgaa.util.shared :refer [session config]]
+            [tgaa.util.image :refer :all])
   (:import [javax.imageio ImageIO]
             [java.io File]
             [java.awt.image BufferedImage]))
@@ -18,5 +19,4 @@
           _ (. (. out-image getGraphics) drawImage image 0 0 nil)]
      out-image))
 
-(defn image-values [image coords]
-  (map (fn [coord] (. image getRGB (nth coord 0) (nth coord 1))) coords))
+
