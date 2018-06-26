@@ -1,20 +1,21 @@
 (ns tgaa.util.shared)
 
-(def session (atom {:trialNum 0
-                    :imageLocation "C:\\Users\\erudi\\OneDrive\\Activity Organizer\\Projects\\Active\\TAA Research\\Project Resources\\images\\unprocessed\\3\\1\\3_1_1.jpg"
-                    :canPaths []}))
+(def session (atom {:trial-num 0
+                    :image-location "C:\\Users\\erudi\\OneDrive\\Activity Organizer\\Projects\\Active\\TAA Research\\Project Resources\\images\\unprocessed\\3\\1\\3_1_1.jpg"
+                    :cand-paths []}))
 
 (defn get-config "Gets Configuration set in text file" [& qualified-path] 
   (if (= (first qualified-path) nil) 
     (read-string (slurp "tgaaConfig.edn"))
     (print "not implemented")))
 
-(defn inc-trail[]
-  "Increments session map :trialNum"
+(defn inc-trial[]
+  "Increments session map :trial-num"
   (reset! session 
-          (assoc @session :trialNum 
+          (assoc @session :trial-num 
                  (inc 
-                   (:trialNum @session)))))
+                   (:trial-num @session)))))
 
 
 (def config (get-config))
+

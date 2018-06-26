@@ -1,8 +1,8 @@
 {
-:numAnts 10
-:numTrails 10
-:maxPathLength 10
-:minPathLength 10
-:thresholdType "L"
-:placementHeuristic 0.2
+:num-ants 10
+:num-trails 10
+:max-path-length 10
+:min-path-len 10
+:thresh-type "L"
+:plac-heur 0.2
 }

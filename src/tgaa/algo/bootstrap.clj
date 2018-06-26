@@ -5,5 +5,4 @@
 
 (defn bootstrap-value [image] 
   (apply max
-         (image-values image  
-                       (random-staring-coords image config))))
+         (random-starting-coords (:numAnts config) image)))

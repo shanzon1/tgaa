@@ -2,76 +2,76 @@
   (:require [tgaa.util.shared :refer :all])
   (:import [java.awt.image BufferedImage]))
 
-(def dir-sel [[0 1][0 2][1 0][2 0][1 1][2 2][1 2][2 1]])
+(def dir-opt [[0 1][0 2][1 0][2 0][1 1][2 2][1 2][2 1]])
 
-(defn path-last-point-gen [dir]
+(defn full-path-last-point [start dir]
   "Get last points of gen axis of a path for performance"
-  (fn [start]
     (cond 
       (= 0 dir)
       start
       (= 1 dir)
-      (+ start (- (:maxPathLength config) 1))
+      (+ start (- (:max-path-length config) 1))
       :else
-      (+ (- start  (:maxPathLength config) ) 1))))
-
-(defn path-generator [dir]
-  "Generates list of functions for one axis of a path"
-  (fn [start]
-    (let [path-len (:maxPathLength config)]
-      (cond 
-        (= 0 dir)
-        (repeat path-len start) 
-        (= 1 dir)
-        (range start (+ start path-len))
-        (= 2 dir)
-        (range (- (inc start) path-len) (inc start))
-        :else nil))))
+      (+ (- start  (:max-path-length config) ) 1)))
   
-(defn random-staring-coords 
-  "Get random set of coordinates"
-  [^BufferedImage image]
-  (partition 2
-             (interleave 
-               (repeatedly 
-                      (:numAnts config) 
-                      #(rand-int 
-                         (. image getWidth)))
-        (repeatedly 
-               (:numAnts config) 
-               #(rand-int 
-                  (. image getHeight))))))
-
-(defn ant-valid-dir 
-  "Creates a random path 45 deg increments with starting point x y and length"
-  [x y image] 
-   (:dir-sel (first 
+(defn rand-ant-dir 
+  "Creates safe random direction at 45 deg increments with starting point x y"
+  [point ^BufferedImage image] 
+   (:dir-opt (first 
                (filter #(let [lx (first (:last %))
                               ly (second (:last %))]
                           (and (> lx 0) (> ly 0)) (< lx (. image getWidth)) (< ly (. image getHeight)))
-                       (map (fn [d] {:last [((path-last-point-gen (first d)) x) ((path-last-point-gen (second d)) y)] 
-                                          :dir-sel d})  (shuffle dir-sel))))))
+                       (map (fn [d] {:last [(full-path-last-point (first point)(first d)) 
+                                            (full-path-last-point (second point) (second d))] 
+                                          :dir-opt d})  (shuffle dir-opt))))))
 
-(defn ant-path [x y image]
-  "Creates an ant path. Path must be valid or exception is thrown"
-  (let [dir-sel (ant-valid-dir x y image)]
-    (map 
-      #(vector %1 %2 (. image getRGB %1 %2))
-    ((path-generator (first dir-sel)) x ) 
-    ((path-generator (second dir-sel)) y))))
+(defn random-point 
+  "Get random set of coordinates"
+  [num-loc ^BufferedImage image]
+  (partition 2
+             (interleave 
+               (repeatedly 
+                      num-loc
+                      #(rand-int 
+                         (. image getWidth)))
+        (repeatedly 
+               num-loc 
+               #(rand-int 
+                  (. image getHeight))))))
 
-(defn get-trail-paths [image]
+(defn ant-path [start-point ^BufferedImage image]
+  "Creates a logical ant path"
+  (let [dir-opt (rand-ant-dir start-point image)]
+    {:start start-point :end nil :dir dir-opt :thresh false}))
+
+
+(defn num-of-random-starts []
+  "Creates number of random starts based on config and session values"
+  (int 
+    (* 
+      (:trial-num @session) 
+      (:plac-heur config) 
+      (:num-ants config))))
+ 
+(defn num-of-phero-starts[]
+  "Creates number of pheromone starts based on config and session values"
+     (int
+       (- (:num-ants config)
+       (* 
+         (:trial-num @session) 
+         (:plac-heur config)
+         (:num-ants config)))))
+
+(defn phero-points [num]
+               (do (print "not implemented")
+                 (repeat 10 [1 1])))
+
+(defn get-trail-paths [^BufferedImage image]
   "Gets ant paths for a trail based on session and config"
-     (let [numPlacedBiased (int 
-                             (* 
-                               (:trialNum @session) 
-                               (:placementHeuristic config) 
-                               (:numAnts config))) 
-           randPaths (map #(ant-path (nth % 0) 
-                                     (nth % 1)
-                                      image) 
-                          (random-staring-coords image))
-           ;biasPaths (if ((:canPaths session)
-           ;need a good data struct thinking map  {:x-y [x y] 
-           ]
-     randPaths))
+  (map #(ant-path % image)
+       (apply conj 
+              (random-point 
+                (num-of-random-starts) image)
+              (phero-points 
+                (num-of-phero-starts)))))
+

@@ -9,11 +9,11 @@
   "Takes a map with :imageLocation and returns assocated BufferedImage"
   (try
     (. ImageIO read (File.  
-       (:imageLocation @session)))
+       (:image-location  @session)))
     (catch Exception e 
       (do (println "Image not found. Check location is correct")
         (throw (Exception.  e))))))
-
+ 
 (defn image-RGB-gray [^BufferedImage image]
    (let [ out-image (BufferedImage. (. image getWidth) (. image getHeight) (. BufferedImage TYPE_BYTE_GRAY))
           _ (. (. out-image getGraphics) drawImage image 0 0 nil)]
