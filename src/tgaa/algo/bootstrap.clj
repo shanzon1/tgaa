@@ -4,5 +4,4 @@
             [tgaa.util.shared :refer [session config]]))
 
 (defn bootstrap-value [image] 
-  (apply max
-         (random-starting-coords (:numAnts config) image)))
+  )

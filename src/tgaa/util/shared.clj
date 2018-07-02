@@ -2,7 +2,8 @@
 
 (def session (atom {:trial-num 0
                     :image-location "C:\\Users\\erudi\\OneDrive\\Activity Organizer\\Projects\\Active\\TAA Research\\Project Resources\\images\\unprocessed\\3\\1\\3_1_1.jpg"
-                    :cand-paths []}))
+                    :cand-paths []
+                    :thresh 0}))
 
 (defn get-config "Gets Configuration set in text file" [& qualified-path] 
   (if (= (first qualified-path) nil) 
@@ -18,4 +19,7 @@
 
 
 (def config (get-config))
+
+(defn update-thresh [thresh]
+  (reset! session (assoc @session :thresh thresh)))
 

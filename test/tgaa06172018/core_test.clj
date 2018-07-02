@@ -2,6 +2,6 @@
   (:require [clojure.test :refer :all]
             [tgaa06172018.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(let [ i (tgaa.util.image/get-image)]
+  (proc-ant 
+    {:start [136 121] :dir [1 -1]} i))
