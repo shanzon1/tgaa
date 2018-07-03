@@ -23,3 +23,8 @@
 (defn update-thresh [thresh]
   (reset! session (assoc @session :thresh thresh)))
 
+(defn trial-num []
+  (:trial-num @session ))
+
+(defn thresh []
+  (:thresh @session))
