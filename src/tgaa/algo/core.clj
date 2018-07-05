@@ -4,19 +4,18 @@
             [tgaa.util.ant-path :as ap]
             [tgaa.util.shared :as shared]))
 
-(defn bootstrap[image]
+(defn bootstrap[]
   (apply min (ap/trial-min-local 
-               (ap/proc-all-ants (ap/init-trail-paths image) image) image)))
+               (ap/proc-all-ants (ap/init-trail-paths)))))
 
-(defn trap-ants [ant-paths image]
-  (tgaa.util.ant-path/trail-max-of-min (tgaa.util.ant-path/escaped-ants ant-paths) image))
-
-(defn trapping [image]
-  (print "Not Implemented"))
-
+(defn perform-trial []
+  (let [trial-paths (ap/proc-all-ants (ap/init-trail-paths))
+        _  (shared/add-canidates (ap/trapped-ants trial-paths))
+        _  (shared/update-thresh  (ap/trap-escaped-thresh trial-paths))]))
 
 (defn process-image [] 
-  (let [image ^BufferedImage (image/image-RGB-gray (image/get-image))
-        _    (shared/update-thresh (bootstrap image))]
+  (let [_    (shared/save-image-ref (image/image-RGB-gray (image/get-image)))
+        _    (shared/update-thresh (bootstrap))
+         ]
              (shared/thresh)))
         
