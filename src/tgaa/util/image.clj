@@ -20,4 +20,12 @@
           _ (. (. out-image getGraphics) drawImage image 0 0 nil)]
      out-image))
 
+(defn pix-value[x y image]
+  {:pre [(and (< x (. image getWidth)) (< 0 x) (< y (. image getHeight)) (< 0 y))]}
+  (. image getRGB x y))
 
+(defn image-height [image]
+  (. image getHeight))
+
+(defn image-width [image]
+  (. image getWidth))

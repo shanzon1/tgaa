@@ -14,8 +14,9 @@
         _  (shared/update-thresh  (ap/trap-escaped-thresh trial-paths))]))
 
 (defn process-image [] 
-  (let [_    (shared/save-image-ref (image/image-RGB-gray (image/get-image)))
-        _    (shared/update-thresh (bootstrap))
+  (let [_ (shared/save-image-ref (image/image-RGB-gray (image/get-image))) ;aquire image
+        _ (shared/update-thresh (bootstrap)) ;bootstrap
+        _ (repeatedly (shared/get-num-trails) #(perform-trial)) ;trapping
          ]
-             (shared/thresh)))
+    (shared/thresh)))
         
