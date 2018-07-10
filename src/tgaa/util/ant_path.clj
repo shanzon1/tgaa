@@ -1,30 +1,10 @@
 (ns tgaa.util.ant-path
   (:require [tgaa.util.shared :as shared]
-            [tgaa.util.image :as image])
+            [tgaa.util.image :as image]
+            [tgaa.algo.trial :as trial] 
+            [tgaa.algo.ant :as ant])
   (:import [java.awt.image BufferedImage]))
 
-(def dir-opt [[0 1][0 -1][1 0][-1 0][1 1][-1 -1][1 -1][-1 1]])
-
-(defn trial-path-point-vals[ant-paths att-key]
-  "gets point value of attribute att-key  of ant paths"
-  (if-not (empty? ant-paths)
-    (map (fn [ant-path] 
-           (let [{ local-max att-key} ant-path
-                 [x y] local-max] (image/pix-value x y (shared/image-ref)))) ant-paths)))
-
-(defn path-loc-at-time [ant-path time]
-  [(+ (first (:start ant-path)) (* (first (:dir ant-path)) time))
-  (+ (second (:start ant-path)) (* (second (:dir ant-path)) time))])
-  
-(defn full-path-last-point [start dir]
-  "Get last points of gen axis of a path for performance"
-    (cond 
-      (= 0 dir)
-      start
-      (= 1 dir)
-      (+ start (- (shared/max-path-length) 1))
-      :else
-      (+ (- start  (shared/max-path-length)) 1)))
   
 (defn rand-ant-dir 
   "Creates safe random direction at 45 deg increments with starting point x y"
@@ -32,10 +12,10 @@
    (:dir-opt (first 
                (filter #(let [lx (first (:last %))
                               ly (second (:last %))]
-                          (and (> lx 0) (> ly 0)) (< lx (image/image-width (shared/image-ref))) (< ly (image/image-height (shared/image-ref))))
-                       (map (fn [d] {:last [(full-path-last-point (first point)(first d)) 
-                                            (full-path-last-point (second point) (second d))] 
-                                          :dir-opt d})  (shuffle dir-opt))))))
+                          (and (>= lx 0) (>= ly 0) (< lx (image/image-width (shared/image-ref))) (< ly (image/image-height (shared/image-ref)))))
+                       (map (fn [d] {:last [(ant/full-path-last-point (first point)(first d)) 
+                                            (ant/full-path-last-point (second point) (second d))] 
+                                          :dir-opt d})  (shuffle ant/dir-opt))))))
 
 (defn random-point 
   "Get random set of coordinates"
@@ -45,11 +25,11 @@
                (repeatedly 
                       num-loc
                       #(rand-int 
-                         (image/image-width (shared/image-ref))))
+                         (dec (image/image-width (shared/image-ref)))))
         (repeatedly 
                num-loc 
                #(rand-int 
-                  (image/image-height (shared/image-ref)))))))
+                  (dec (image/image-height (shared/image-ref))))))))
 
 (defn ant-path [start-point]
   "Creates a logical ant path"
@@ -75,15 +55,18 @@
          (shared/num-ants)))))
 
 
-;;;;;;;;;;;;; not tested 
+
 (defn phero-points [num]
-  (if-not (empty? (shared/canidates))
-    (let [num (if (> num (count (shared/canidates)))
+  "radomized ants gets one random point in each <num> paths from cand set"
+  (if-not (or (empty? (shared/canidates)) (> 1 num))
+    (let [num-safe (if (> num (count (shared/canidates)))
                      (count (shared/canidates))
                      num)]
-      (path-loc-at-time (take num (shuffle (shared/canidates))) (rand-int shared/max-path-length))))
-  (vector))
-    
+      (map #(tgaa.algo.ant/path-loc-at-time %1 %2)
+           (take num-safe (shuffle (shared/canidates))) 
+           (repeatedly num-safe #(rand-int (shared/max-path-length)))))
+      (vector)))
+  
 
 (defn init-trail-paths []
   "Gets ant paths for a trail based on trail-state and config"
@@ -112,48 +95,21 @@
 (defn proc-ant [ant-path]
   "Takes ants and image and generates logical paths"
   (loop [i 0 thresh? false end-pont nil local-min nil local-max nil]
-    (if (or (>= i  (shared/num-ants)) thresh?)
+    (if (or (>= i  (shared/max-path-length)) thresh?)
       ; needs to be extracted to shared only
       (assoc ant-path :thresh thresh? :end end-pont :local-min local-min :local-max local-max)
-      (let [[x y] (path-loc-at-time ant-path i)]
+      (let [[x y] (ant/path-loc-at-time ant-path i)
+            _  (when (or (< x 0) (< y 0)) (println ant-path))]
         (recur (inc i) 
-               (if (and (nil? (shared/thresh)) (> (shared/thresh) (image/pix-value  x y (shared/image-ref))))
+               (if (or (nil? (shared/thresh)) (> (image/pix-value  x y (shared/image-ref)) (shared/thresh)))
                  true false)
                [x y]
                (compare-two-points local-min [x y]  :less)
                (compare-two-points local-max [x y]  :great))))))
+
 
 (defn proc-all-ants [ant-init]
   (if-not (empty? ant-init)
   (map #(proc-ant %) ant-init)))
 
 
-(defn trial-min-local[ant-paths]
-  "gets min value of all paths"
-  (if-not (empty? ant-paths)
-    (trial-path-point-vals ant-paths :local-min)))
-
-(defn trial-max-local[ant-paths]
-  "gets max values of all paths"
-  (if-not (empty? ant-paths)
-    (trial-path-point-vals ant-paths :local-max)))
-
-(defn trail-min-of-max[ant-paths]
-  (if-not (empty? ant-paths)
-    (apply min (trial-max-local ant-paths))))
-
-(defn trail-max-of-min[ant-paths]
-  (if-not (empty? ant-paths)
-    (apply max (trial-min-local ant-paths))))
-
-(defn escaped-ants [ant-paths]
-  (if-not (empty? ant-paths)
-    (filter #(= (:thresh %) false) ant-paths)))
-
-(defn trapped-ants [ant-paths]
-  (if-not (empty? ant-paths)
-    (filter #(= (:thresh %) true) ant-paths)))
-
-(defn trap-escaped-thresh [ant-paths]
-  (if-not (empty? ant-paths)
-    (trail-max-of-min (escaped-ants ant-paths))))

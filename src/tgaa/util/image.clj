@@ -1,5 +1,6 @@
 (ns tgaa.util.image
-  (:require [tgaa.util.shared :as shared])
+  (:require [tgaa.util.shared :as shared]
+            [clojure.test :refer [is]])
   (:import [javax.imageio ImageIO]
             [java.io File]
             [java.awt.image BufferedImage]))
@@ -21,7 +22,10 @@
      out-image))
 
 (defn pix-value[x y image]
-  {:pre [(and (< x (. image getWidth)) (< 0 x) (< y (. image getHeight)) (< 0 y))]}
+  {:pre [(and (is (< x (. image getWidth))) 
+              (is (<= 0 x)) 
+              (is(< y (. image getHeight))) 
+              (is (<= 0 y)))]}
   (. image getRGB x y))
 
 (defn image-height [image]
