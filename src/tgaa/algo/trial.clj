@@ -7,7 +7,7 @@
   (if-not (empty? ant-paths)
     (map (fn [ant-path] 
            (let [{ local-max att-key} ant-path
-                 [x y] local-max] (image/pix-value x y (shared/image-ref)))) ant-paths)))
+                 [x y] local-max] (image/pix-value x y (shared/image-gry-ref)))) ant-paths)))
 
 (defn escaped-ants [ant-paths]
   (if-not (empty? ant-paths)

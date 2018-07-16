@@ -2,12 +2,12 @@
     (:require [tgaa.util.ant-path :as ap]
               [tgaa.util.shared :as shared]
               [tgaa.algo.trial :as trial]
-              [tgaa.util.image :as image]))
+              [tgaa.util.image :as image]
+              [tgaa.java.util.filters :as filter]))
 
 (defn load-image []
-  (shared/save-image-ref 
-    (image/image-RGB-gray 
-      (image/get-image))))
+  (do (shared/save-image-ref (image/get-image))
+    (shared/save-image-gry-ref ((filter/grayscale)(shared/image-ref)))))
 
 (defn bootstrap[]
   (shared/update-thresh 

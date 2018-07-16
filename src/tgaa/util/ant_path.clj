@@ -12,7 +12,7 @@
    (:dir-opt (first 
                (filter #(let [lx (first (:last %))
                               ly (second (:last %))]
-                          (and (>= lx 0) (>= ly 0) (< lx (image/image-width (shared/image-ref))) (< ly (image/image-height (shared/image-ref)))))
+                          (and (>= lx 0) (>= ly 0) (< lx (image/image-width (shared/image-gry-ref))) (< ly (image/image-height (shared/image-gry-ref)))))
                        (map (fn [d] {:last [(ant/full-path-last-point (first point)(first d)) 
                                             (ant/full-path-last-point (second point) (second d))] 
                                           :dir-opt d})  (shuffle ant/dir-opt))))))
@@ -25,11 +25,11 @@
                (repeatedly 
                       num-loc
                       #(rand-int 
-                         (dec (image/image-width (shared/image-ref)))))
+                         (dec (image/image-width (shared/image-gry-ref)))))
         (repeatedly 
                num-loc 
                #(rand-int 
-                  (dec (image/image-height (shared/image-ref))))))))
+                  (dec (image/image-height (shared/image-gry-ref))))))))
 
 (defn ant-path [start-point]
   "Creates a logical ant path"
@@ -81,8 +81,8 @@
   "returns point-comp if point-ref is null; point-compare returned on if true given compare-type :less :great"
   (if (nil? point-ref)
     point-comp
-    (let [ref-val (image/pix-value (first point-ref)(second point-ref) (shared/image-ref))
-          comp-val (image/pix-value (first point-comp)(second point-comp) (shared/image-ref))] 
+    (let [ref-val (image/pix-value (first point-ref)(second point-ref) (shared/image-gry-ref))
+          comp-val (image/pix-value (first point-comp)(second point-comp) (shared/image-gry-ref))] 
       (if (= :less compare-type)
         (if (> ref-val comp-val)
           point-comp
@@ -101,7 +101,7 @@
       (let [[x y] (ant/path-loc-at-time ant-path i)
             _  (when (or (< x 0) (< y 0)) (println ant-path))]
         (recur (inc i) 
-               (if (or (nil? (shared/thresh)) (> (image/pix-value  x y (shared/image-ref)) (shared/thresh)))
+               (if (or (nil? (shared/thresh)) (> (image/pix-value  x y (shared/image-gry-ref)) (shared/thresh)))
                  true false)
                [x y]
                (compare-two-points local-min [x y]  :less)

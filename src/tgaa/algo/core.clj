@@ -4,6 +4,7 @@
 
 
 
+
 (defn process-image [] 
   (do(phase/load-image)
        (phase/bootstrap)

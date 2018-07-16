@@ -47,6 +47,13 @@
 (defn save-image-loc [abs-path]
   (reset! trial-state (assoc @trial-state :image-location abs-path)))
 
+(defn save-image-gry-ref[image]
+  (reset! trial-state (assoc @trial-state :image-grayscale image)))
+
+(defn image-gry-ref []
+  {:pre [(not (nil? (:image @trial-state)))]}
+  (:image-grayscale @trial-state))
+
 (defn save-image-ref[image]
   (reset! trial-state (assoc @trial-state :image image)))
 
