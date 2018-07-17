@@ -32,9 +32,12 @@
                   (dec (image/image-height (shared/image-gry-ref))))))))
 
 (defn ant-path [start-point]
-  "Creates a logical ant path"
-  (let [dir-opt (rand-ant-dir start-point)]
-    {:start start-point :end nil :dir dir-opt :thresh false :trial-num (shared/trial-num)}))
+  "Creates an ant path"
+  (->> (ant/create-ant-path) 
+    (ant/ant-trial-num (shared/trial-num))
+    (ant/ant-thresh? false) 
+    (ant/ant-dir-vec (rand-ant-dir start-point))
+    (ant/ant-start-point start-point)))
 
 
 (defn num-of-phero-starts []
@@ -94,10 +97,15 @@
 
 (defn proc-ant [ant-path]
   "Takes ants and image and generates logical paths"
-  (loop [i 0 thresh? false end-pont nil local-min nil local-max nil]
+  (loop [i 0 thresh? false end-point nil local-min nil local-max nil]
     (if (or (>= i  (shared/max-path-length)) thresh?)
       ; needs to be extracted to shared only
-      (assoc ant-path :thresh thresh? :end end-pont :local-min local-min :local-max local-max)
+      (->> ant-path 
+        (ant/ant-thresh? thresh?)
+        (ant/ant-end-point end-point)
+        (ant/ant-local-min local-min)
+        (ant/ant-local-max local-max)
+        (ant/ant-path-length i))
       (let [[x y] (ant/path-loc-at-time ant-path i)
             _  (when (or (< x 0) (< y 0)) (println ant-path))]
         (recur (inc i) 

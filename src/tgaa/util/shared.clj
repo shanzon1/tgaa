@@ -14,6 +14,9 @@
 
 (def config (get-config)) 
 
+(defn min-path-len []
+  (:min-path-len config))
+
 (defn get-num-trails []
   {:pre [(not (nil? (:num-trails config )))]}
   (:num-trails config))

@@ -15,7 +15,8 @@
                (ap/proc-all-ants (ap/init-trail-paths))))))
 
 (defn perform-trial []
-  (let [trial-paths (ap/proc-all-ants (ap/init-trail-paths))
+  (let [_ (shared/inc-trial)
+        trial-paths (ap/proc-all-ants (ap/init-trail-paths))
         _  (shared/add-canidates (trial/trapped-ants trial-paths))
         trial-thresh (trial/trap-escaped-thresh trial-paths)
         _  (when (not (nil? trial-thresh)) (> trial-thresh (shared/thresh))

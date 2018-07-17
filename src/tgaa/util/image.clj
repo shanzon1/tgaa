@@ -1,7 +1,8 @@
 (ns tgaa.util.image
   (:require [tgaa.util.shared :as shared]
             [clojure.test :refer [is]]
-            [tgaa.java.util.filters :as filter])
+            [tgaa.java.util.filters :as filter]
+            [clojure.string :refer [upper-case]])
   (:import [javax.imageio ImageIO]
             [java.io File]
             [java.awt.image BufferedImage]
@@ -39,12 +40,22 @@
 (defn image-width [image]
   (. image getWidth))
 
+(defn show-image []
+  (show (shared/image-ref)))
+
 (defn show-segmentaton []
   (show ((filter/threshold (shared/thresh)) (shared/image-ref))))
-  
 
-;  ************ drawing lines
-;(let [g (. (tgaa.util.shared/image-ref) createGraphics)
-;      _ (. g setColor (. Color YELLOW))
-;      _ (. g setStroke (BasicStroke. 2))
-;      _ (map (fn [{:keys [start end]}] (. g drawLine (first start) (second start) (+ (first end) 10) (+ (second end) 10))) (tgaa.util.shared/canidates))])
+(defn draw-paths [ant-paths-filter-func color-name-str img-ref line-width]
+  (let [g (doto (. img-ref createGraphics)
+            (.setColor (eval (read-string 
+                               (str "(. Color "  
+                                    (upper-case color-name-str) ")"))))
+            (.setStroke (BasicStroke. line-width)))]
+    (doall (map 
+             (fn [{:keys [start end]}] 
+               (. g drawLine (first start) (second start) (first end) (second end))) 
+             (filter ant-paths-filter-func (tgaa.util.shared/canidates))))))
+
+(defn draw-all-can-paths[]
+  (draw-paths (fn [x] true) "YELLOW" (tgaa.util.shared/image-ref) 2))
