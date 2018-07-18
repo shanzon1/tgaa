@@ -2,14 +2,16 @@
   (:require [tgaa.util.shared :as shared]
             [clojure.test :refer [is]]
             [tgaa.java.util.filters :as filter]
-            [clojure.string :refer [upper-case]])
+            [clojure.string :refer [upper-case]]
+            [tgaa.algo.ant :as ant]
+            [mikera.image.core :as mi])
   (:import [javax.imageio ImageIO]
             [java.io File]
             [java.awt.image BufferedImage]
-            [java.awt BasicStroke Color]))
-
-(use 'mikera.image.core)
-
+            [java.awt BasicStroke]
+            [java.awt Color]))
+(import 'java.awt.Color)
+;(use 'mikera.image.core)
 
 (defn get-image [& abs-path]
   "Takes a map with :imageLocation and returns assocated BufferedImage"
@@ -41,10 +43,7 @@
   (. image getWidth))
 
 (defn show-image []
-  (show (shared/image-ref)))
-
-(defn show-segmentaton []
-  (show ((filter/threshold (shared/thresh)) (shared/image-ref))))
+  (mi/show (shared/image-ref)))
 
 (defn draw-paths [ant-paths-filter-func color-name-str img-ref line-width]
   (let [g (doto (. img-ref createGraphics)
@@ -55,7 +54,28 @@
     (doall (map 
              (fn [{:keys [start end]}] 
                (. g drawLine (first start) (second start) (first end) (second end))) 
-             (filter ant-paths-filter-func (tgaa.util.shared/canidates))))))
+             (filter ant-paths-filter-func (shared/canidates))))))
 
-(defn draw-all-can-paths[]
-  (draw-paths (fn [x] true) "YELLOW" (tgaa.util.shared/image-ref) 2))
+(defn draw-can-paths
+  ([]
+    (let [i (mi/copy (shared/image-ref))]
+    (draw-paths (fn [x] true) "YELLOW" i 2)
+      i))
+    ([trial-num]
+      (let [i (mi/copy (shared/image-ref))]
+    (draw-paths (fn [x] (= (ant/ant-trial-num x) trial-num)) "YELLOW" i 2)
+      i)))
+
+(defn show-segmentaton []
+  (mi/show ((filter/threshold (shared/thresh)) (shared/image-ref))))
+
+(defn show-cann-path
+  ([] (mi/show (draw-can-paths)))
+  ([trial-num] (mi/show (draw-can-paths trial-num))))
+
+(defn anim-trail-paths[]
+  (loop [i 0]
+    (if (= i (shared/get-num-trails))
+      nil
+      (do (Thread/sleep 1000) (show-cann-path i) (recur (inc i))))))
+  
