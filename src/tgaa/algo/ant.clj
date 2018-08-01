@@ -12,6 +12,12 @@
       (key-name (first in))
       (assoc (second in) key-name (first in))))
 
+(defn ant-group
+  ([ant-path]
+    (attribute-set-get :group ant-path))
+  ([value ant-path]
+    (attribute-set-get :group value ant-path)))
+
 (defn ant-thresh? 
   ([ant-path]
     (attribute-set-get :thresh? ant-path))
