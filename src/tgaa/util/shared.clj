@@ -1,9 +1,16 @@
 (ns tgaa.util.shared)
 
-(def trial-state (atom {:trial-num 0
+
+(def trial-base {:trial-num 0
                     :image-location "C:\\Users\\erudi\\OneDrive\\Activity Organizer\\Projects\\Active\\TAA Research\\Project Resources\\images\\unprocessed\\3\\1\\3_1_1.jpg"
                     :cand-paths []
-                    :thresh 0}))
+                    :thresh 0})
+
+
+(def trial-state (atom trial-base))
+
+(defn init-trail-state []
+  (reset! trial-state trial-base))
 
 (defn get-config 
   "Gets Configuration set in text file" 
@@ -14,12 +21,24 @@
 
 (def config (get-config)) 
 
+(defn trial-num [] 
+  {:pre [(not (nil? (:trial-num @trial-state)))]}
+  (:trial-num @trial-state ))
+
 (defn min-path-len []
   (:min-path-len config))
 
 (defn get-num-trails []
   {:pre [(not (nil? (:num-trails config )))]}
   (:num-trails config))
+
+(defn min-cont-thresh []
+  {:pre [(not (nil? (:min-cont-thresh config )))]}
+  (:min-cont-thresh config))
+
+(defn min-conn-thresh []
+  {:pre [(not (nil? (:min-conn-thresh config )))]}
+  (:min-conn-thresh config))
 
 (defn thresh-oper []
    {:pre [(not (nil? (:thresh-oper config )))]}
@@ -30,6 +49,56 @@
   (if-not (empty? (:cand-paths @trial-state))
   (:cand-paths @trial-state)
   (vector)))
+
+(defn salient-paths
+  []
+  (if-not (empty? (:salient-paths @trial-state))
+  (:salient-paths @trial-state)
+  (vector)))
+
+(defn trial-info 
+  [key value]
+  (if-not (or (nil? key) (nil? value) (not (:debug config)))
+    (let [trial-key (keyword (str (trial-num)))
+          info-run (if (nil? (:trial-log  @trial-state ))
+                             {}
+                             (:trial-log  @trial-state ))
+          info-trial (if (nil? (trial-key info-run))
+                       {}
+                       (trial-key info-run))]
+      (reset! trial-state (assoc @trial-state :trial-log  (assoc info-run trial-key (assoc info-trial key value)))))))
+
+(defn trial-logs []
+  (sort #(< (Integer. (name (first %1))) (Integer. (name (first %2)))) (:trial-log  @trial-state )))
+
+(defn trial-info-esc
+  [num]
+  (trial-info :esc-num num))
+
+(defn trial-info-cand
+  [num]
+  (trial-info :cand-num num))
+
+(defn trial-info-thresh
+  [num]
+  (trial-info :thresh num))
+
+(defn trial-info-path-cnt
+  [num]
+  (trial-info :path-count num))
+
+(defn trial-info-error
+  [error]
+  (trial-info (keyword (str "error_" (gensym)))  error))
+
+(defn trial-info-gen
+  [info]
+  (trial-info (keyword (str "info_" (gensym)))  info))
+
+(defn add-salient-paths
+  [salient-paths]
+  (if-not (empty? salient-paths)
+    (reset! trial-state  (assoc @trial-state :salient-paths (apply conj (:salient-paths @trial-state) salient-paths)))))
 
 (defn add-canidates
   [cand-paths-list]
@@ -66,10 +135,6 @@
 
 (defn update-thresh [thresh]
   (reset! trial-state (assoc @trial-state :thresh thresh)))
-
-(defn trial-num [] 
-  {:pre [(not (nil? (:trial-num @trial-state)))]}
-  (:trial-num @trial-state ))
 
 (defn thresh []
   {:pre [(not (nil? (:thresh @trial-state)))]}

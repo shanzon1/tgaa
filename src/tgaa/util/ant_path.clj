@@ -61,14 +61,15 @@
 
 (defn phero-points [num]
   "radomized ants gets one random point in each <num> paths from cand set"
-  (if-not (or (empty? (shared/canidates)) (> 1 num))
-    (let [num-safe (if (> num (count (shared/canidates)))
-                     (count (shared/canidates))
-                     num)]
-      (map #(tgaa.algo.ant/path-loc-at-time %1 %2)
-           (take num-safe (shuffle (shared/canidates))) 
-           (repeatedly num-safe #(rand-int (shared/max-path-length)))))
-      (vector)))
+  (if (and (not (empty? (shared/canidates))) (< 0 num))
+    (let [bias-paths (take num (cycle (shuffle (shared/canidates))))
+          lengths (map #(ant/ant-path-length %) bias-paths)
+          start-loc (map #(ant/path-loc-at-time %1 %2)
+                         bias-paths
+                         (map rand-int lengths))]
+      
+    start-loc)
+    (vector)))
   
 
 (defn init-trail-paths []
@@ -95,22 +96,24 @@
           point-ref)))))     
      
 
+; thesh-count causing issues with path length
 (defn proc-ant [ant-path]
   "Takes ants and image and generates logical paths"
-  (loop [i 0 thresh? false end-point nil local-min nil local-max nil]
-    (if (or (>= i  (shared/max-path-length)) thresh?)
-      ; needs to be extracted to shared only
+  (loop [i 0 thresh-count 0 end-point nil local-min nil local-max nil]
+    (if (or (>= i  (shared/max-path-length)) (>= thresh-count (shared/min-cont-thresh)))
+      (let [thresh? (>= thresh-count (shared/min-cont-thresh))]
       (->> ant-path 
         (ant/ant-thresh? thresh?)
         (ant/ant-end-point end-point)
         (ant/ant-local-min local-min)
         (ant/ant-local-max local-max)
-        (ant/ant-path-length i))
+        (ant/ant-path-length i)))
       (let [[x y] (ant/path-loc-at-time ant-path i)
             _  (when (or (< x 0) (< y 0)) (println ant-path))]
         (recur (inc i) 
                (if (or (nil? (shared/thresh)) (> (image/pix-value  x y (shared/image-gry-ref)) (shared/thresh)))
-                 true false)
+                 (inc thresh-count)
+                 0)
                [x y]
                (compare-two-points local-min [x y]  :less)
                (compare-two-points local-max [x y]  :great))))))
@@ -118,6 +121,7 @@
 
 (defn proc-all-ants [ant-init]
   (if-not (empty? ant-init)
-  (map #(proc-ant %) ant-init)))
+    (let [paths (map #(proc-ant %) ant-init)]
+      paths)))
 
 

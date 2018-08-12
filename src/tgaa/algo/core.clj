@@ -6,7 +6,10 @@
 
 
 (defn process-image [] 
-  (do(phase/load-image)
+  (do(tgaa.util.shared/init-trail-state)
+    (phase/load-image)
        (phase/bootstrap)
-       (phase/trapping)))
+       (phase/trapping)
+       (phase/evaluation)))
         
+;(tgaa.util.image/anim-trail-paths)

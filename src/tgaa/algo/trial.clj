@@ -36,8 +36,13 @@
     (apply max (trial-min-local ant-paths))))
 
 (defn trap-escaped-thresh [ant-paths]
-  (if-not (empty? ant-paths)
-    (trial-max-of-min (escaped-ants ant-paths))))
+  (if (not (empty? ant-paths))
+    (let [esc-ant (escaped-ants ant-paths)
+          _ (shared/trial-info-esc (count esc-ant))]
+      (if-not (or (nil? esc-ant) (empty? esc-ant))
+        (trial-max-of-min esc-ant)
+        (shared/thresh)))
+  (shared/thresh)))
 
 (defn is-boxed [path-1 path-2]
   (let [[start-x-1 start-y-1] (ant/ant-start-point path-1)
@@ -69,15 +74,21 @@
 (defn make-groups [cann-path]
   (loop [non-group cann-path groups [] meta-data {} group-id 0]
     (if (empty? non-group)
-      [:groups groups :group-data meta-data]
+      {:groups groups :group-data meta-data}
       (let [[group-res non-group-res  ] (make-group non-group)]
         (recur non-group-res  
                (apply conj groups (map #(assoc % :group group-id) group-res))
                (assoc meta-data (keyword (str group-id)) (count group-res))
                (inc group-id))))))
 
-; testing
-;(make-groups (filter #(= (tgaa.algo.ant/ant-trial-num %) 25) (tgaa.util.shared/canidates)))
+(defn salient-regions []
+  (let [groups (make-groups 
+                 (filter #(= (tgaa.algo.ant/ant-trial-num %) (shared/get-num-trails)) 
+                         (tgaa.util.shared/canidates)))
+        min-conn-group-ids (apply hash-map (flatten (filter #(>= (second %)( shared/min-conn-thresh)) (:group-data groups))))]
+    (shared/add-salient-paths  (filter #(contains? min-conn-group-ids (keyword (str (ant/ant-group %)))) (:groups groups)))))
+
+
 
         
         

@@ -16,11 +16,20 @@
 
 (defn perform-trial []
   (let [_ (shared/inc-trial)
-        trial-paths (ap/proc-all-ants (ap/init-trail-paths))
-        _  (shared/add-canidates (trial/trapped-ants trial-paths))
+        trial-paths (ap/proc-all-ants 
+                      (ap/init-trail-paths))
+        _ (shared/trial-info-path-cnt (count trial-paths))
+        ta (trial/trapped-ants trial-paths)
+        _ (shared/trial-info-cand (count ta))
+        _ (shared/add-canidates ta)
         trial-thresh (trial/trap-escaped-thresh trial-paths)
-        _  (when (not (nil? trial-thresh)) (> trial-thresh (shared/thresh))
-             (shared/update-thresh trial-thresh))]))
+        _ (shared/trial-info-thresh trial-thresh)
+        _ (when (not (nil? trial-thresh)) (> trial-thresh (shared/thresh))
+            (shared/update-thresh trial-thresh))]))
 
 (defn trapping []
   (repeatedly (shared/get-num-trails) #(perform-trial)))
+
+(defn evaluation [] 
+  (trial/salient-regions))
+

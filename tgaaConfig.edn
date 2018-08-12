@@ -1,8 +1,11 @@
 {
 :num-ants 40
 :num-trails 25
-:max-path-length 120
-:min-path-len 20
+:max-path-length 200
+:min-path-len 50
 :thresh-oper <
-:plac-heur 0.1
+:plac-heur 0.05
+:min-conn-thresh 5
+:min-cont-thresh 5
+:debug true
 }
