@@ -1,9 +1,10 @@
 (ns tgaa.algo.phases
-    (:require [tgaa.util.ant-path :as ap]
-              [tgaa.util.shared :as shared]
+    (:require [tgaa.algo.ant-path :as ap]
+              [tgaa.struct.shared :as shared]
               [tgaa.algo.trial :as trial]
               [tgaa.util.image :as image]
-              [tgaa.java.util.filters :as filter]))
+              [tgaa.util.filters :as filter]
+              [tgaa.algo.analysis :as analysis]))
 
 (defn load-image []
   (do (shared/save-image-ref (image/get-image))
@@ -31,5 +32,5 @@
   (repeatedly (shared/get-num-trails) #(perform-trial)))
 
 (defn evaluation [] 
-  (trial/salient-regions))
+  (analysis/salient-regions))
 

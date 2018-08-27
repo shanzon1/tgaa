@@ -1,4 +1,5 @@
-(ns tgaa.util.shared)
+(ns tgaa.struct.shared
+  (:require [tgaa.struct.ant :as ant]))
 
 
 (def trial-base {:trial-num 0
@@ -45,16 +46,13 @@
   (:thresh-oper config))
 
 (defn canidates
-  []
+  ([]
   (if-not (empty? (:cand-paths @trial-state))
   (:cand-paths @trial-state)
   (vector)))
+  ([trial-num]
+    (filter #(= (ant/ant-trial-num %) trial-num) (:cand-paths @trial-state))))
 
-(defn salient-paths
-  []
-  (if-not (empty? (:salient-paths @trial-state))
-  (:salient-paths @trial-state)
-  (vector)))
 
 (defn trial-info 
   [key value]
@@ -95,10 +93,17 @@
   [info]
   (trial-info (keyword (str "info_" (gensym)))  info))
 
-(defn add-salient-paths
-  [salient-paths]
-  (if-not (empty? salient-paths)
-    (reset! trial-state  (assoc @trial-state :salient-paths (apply conj (:salient-paths @trial-state) salient-paths)))))
+(defn salient-results 
+  ([] (:salient-results @trial-state))
+  ([salient-results]
+    (if-not (empty? salient-results)
+    (reset! trial-state  (assoc @trial-state :salient-results (apply conj (:salient-results @trial-state) salient-results))))))
+
+(defn salient-ids
+  ([] (:salient-ids @trial-state))
+  ([salient-ids]
+  (if-not (empty? salient-ids)
+    (reset! trial-state  (assoc @trial-state :salient-ids (apply conj (:salient-ids @trial-state) salient-ids))))))
 
 (defn add-canidates
   [cand-paths-list]

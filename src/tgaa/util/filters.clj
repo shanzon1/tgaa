@@ -1,4 +1,4 @@
-(ns tgaa.java.util.filters
+(ns tgaa.util.filters
   (:import [java.awt.image BufferedImage BufferedImageOp]))
 
 (set! *warn-on-reflection* true)

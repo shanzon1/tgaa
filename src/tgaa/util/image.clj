@@ -1,9 +1,9 @@
 (ns tgaa.util.image
-  (:require [tgaa.util.shared :as shared]
+  (:require [tgaa.struct.shared :as shared]
             [clojure.test :refer [is]]
-            [tgaa.java.util.filters :as filter]
+            [tgaa.util.filters :as filter]
             [clojure.string :refer [upper-case]]
-            [tgaa.algo.ant :as ant]
+            [tgaa.struct.ant :as ant]
             [mikera.image.core :as mi])
   (:import [javax.imageio ImageIO]
             [java.io File]
@@ -11,7 +11,7 @@
             [java.awt BasicStroke]
             [java.awt Color]))
 (import 'java.awt.Color)
-;(use 'mikera.image.core)
+(import 'java.awt.Polygon)
 
 (defn get-image [& abs-path]
   "Takes a map with :imageLocation and returns assocated BufferedImage"
@@ -79,3 +79,19 @@
       nil
       (do (Thread/sleep 1000) (show-cann-path i) (recur (inc i))))))
   
+
+(defn draw-boundary [ref-img boundary]
+  (let [boundary-closed (concat boundary [(first boundary)])
+        xpnts (map #(int (. % getX)) boundary-closed)
+        ypnts (map  #(int (. % getY)) boundary-closed)
+        p-num (count boundary-closed)
+        g (. ref-img createGraphics)
+        _ (doto g (.setColor (. Color BLUE))
+            (.setStroke (java.awt.BasicStroke. 1))
+            (.drawPolyline (int-array p-num xpnts) (int-array p-num ypnts) p-num))]
+    (mikera.image.core/show ref-img)))
+
+;(defn draw-final-boundary[]
+;  (draw-boundary (mikera.image.core/copy (tgaa.struct.shared/image-ref)))
+  
+;(draw-boundary i (tgaa.algo.analysis/final-boundary))

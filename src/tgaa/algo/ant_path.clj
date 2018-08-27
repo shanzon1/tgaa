@@ -1,11 +1,20 @@
-(ns tgaa.util.ant-path
-  (:require [tgaa.util.shared :as shared]
+(ns tgaa.algo.ant-path
+  (:require [tgaa.struct.shared :as shared]
             [tgaa.util.image :as image]
             [tgaa.algo.trial :as trial] 
-            [tgaa.algo.ant :as ant])
+            [tgaa.struct.ant :as ant])
   (:import [java.awt.image BufferedImage]))
 
-  
+(defn full-path-last-point [start dir]
+  "Get last points of gen axis of a path for performance"
+    (cond 
+      (= 0 dir)
+      start
+      (= 1 dir)
+      (+ start (- (shared/max-path-length) 1))
+      :else
+      (+ (- start  (shared/max-path-length)) 1)))
+
 (defn rand-ant-dir 
   "Creates safe random direction at 45 deg increments with starting point x y"
   [point] 
@@ -13,8 +22,8 @@
                (filter #(let [lx (first (:last %))
                               ly (second (:last %))]
                           (and (>= lx 0) (>= ly 0) (< lx (image/image-width (shared/image-gry-ref))) (< ly (image/image-height (shared/image-gry-ref)))))
-                       (map (fn [d] {:last [(ant/full-path-last-point (first point)(first d)) 
-                                            (ant/full-path-last-point (second point) (second d))] 
+                       (map (fn [d] {:last [(full-path-last-point (first point)(first d)) 
+                                            (full-path-last-point (second point) (second d))] 
                                           :dir-opt d})  (shuffle ant/dir-opt))))))
 
 (defn random-point 
