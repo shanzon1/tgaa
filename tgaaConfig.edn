@@ -1,11 +1,14 @@
 {
-:num-ants 40
-:num-trails 25
+:num-ants 200
+:num-trails 20
+:num-eval-ants 1000
 :max-path-length 200
-:min-path-len 50
-:thresh-oper <
-:plac-heur 0.05
-:min-conn-thresh 5
-:min-cont-thresh 5
+:min-path-len 80
+:target-intensity "HIGH" 
+:plac-heur 0.1
+:min-conn-thresh 2
+:min-cont-thresh 10
 :debug true
+:min-esc-update 10
+:image-location "C:\\Users\\erudi\\Desktop\\Thesis End Game\\1_3_1_c.jpg"
 }

@@ -33,14 +33,30 @@
 
 (defn trial-max-of-min[ant-paths]
   (if-not (empty? ant-paths)
-    (apply max (trial-min-local ant-paths))))
+    (let [mins (trial-min-local ant-paths)
+          _ (shared/trial-info :mins mins)]
+    (apply max mins))))
+
+(defn trial-min-of-max[ant-paths]
+  (if-not (empty? ant-paths)
+    (let [maxs (trial-max-local ant-paths)
+          _ (shared/trial-info :maxs maxs)]
+    (apply min maxs))))
+
+(defn trial-min-of-min[ant-paths]
+  (if-not (empty? ant-paths)
+    (let [mins (trial-min-local ant-paths)
+          _ (shared/trial-info :mins mins)]
+    (apply min mins))))
 
 (defn trap-escaped-thresh [ant-paths]
   (if (not (empty? ant-paths))
     (let [esc-ant (escaped-ants ant-paths)
-          _ (shared/trial-info-esc (count esc-ant))]
-      (if-not (or (nil? esc-ant) (empty? esc-ant))
-        (trial-max-of-min esc-ant)
+          esc_cnt (count esc-ant)
+          _ (shared/trial-info-esc esc_cnt)]
+      (if-not (or (nil? esc-ant) (empty? esc-ant)(< esc_cnt (shared/min-esc-paths)))
+        (do (shared/trial-info :update true) 
+          (trial-max-of-min esc-ant))
         (shared/thresh)))
   (shared/thresh)))
 

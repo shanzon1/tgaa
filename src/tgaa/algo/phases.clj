@@ -15,7 +15,7 @@
     (apply max(trial/trial-max-local 
                (ap/proc-all-ants (ap/init-trail-paths))))))
 
-(defn perform-trial []
+(defn trapping-trial []
   (let [_ (shared/inc-trial)
         trial-paths (ap/proc-all-ants 
                       (ap/init-trail-paths))
@@ -28,9 +28,27 @@
         _ (when (not (nil? trial-thresh)) (> trial-thresh (shared/thresh))
             (shared/update-thresh trial-thresh))]))
 
+
+
+(defn reprocess-paths []
+  "evaluation phase: prune paths that threshold omits and reprocess all paths with final threshold"
+  (shared/eval-paths
+    (filter #(> (tgaa.struct.ant/ant-path-length %) (shared/min-path-len))
+            (map 
+              tgaa.algo.ant-path/proc-ant  
+              (filter #(>
+                         (shared/thresh) (tgaa.util.image/pix-value (tgaa.struct.ant/ant-local-min %) (shared/image-gry-ref)))
+                      (shared/canidates))))))
+
 (defn trapping []
-  (repeatedly (shared/get-num-trails) #(perform-trial)))
+  (do (repeatedly (shared/get-num-trails) #(trapping-trial))))
 
 (defn evaluation [] 
-  (analysis/salient-regions))
+  (do (reprocess-paths)
+    (analysis/salient-regions)) nil)
+
+(defn analysis-hull[]
+  "returns set of points representing the hull"
+  (shared/hull (analysis/convex-hull (shared/canidates (shared/get-num-trails)))))
+;;; not exicuting!!!!
 

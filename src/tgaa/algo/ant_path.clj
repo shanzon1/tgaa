@@ -18,13 +18,16 @@
 (defn rand-ant-dir 
   "Creates safe random direction at 45 deg increments with starting point x y"
   [point] 
-   (:dir-opt (first 
+   (let [dir (:dir-opt (first 
                (filter #(let [lx (first (:last %))
                               ly (second (:last %))]
                           (and (>= lx 0) (>= ly 0) (< lx (image/image-width (shared/image-gry-ref))) (< ly (image/image-height (shared/image-gry-ref)))))
                        (map (fn [d] {:last [(full-path-last-point (first point)(first d)) 
-                                            (full-path-last-point (second point) (second d))] 
-                                          :dir-opt d})  (shuffle ant/dir-opt))))))
+                                                      (full-path-last-point (second point) (second d))] 
+                                          :dir-opt d})  (shuffle ant/dir-opt)))))]
+     (if (nil? dir)
+       (-> (Exception. "No Direction is Possible. Please Check configuration") throw)
+       dir)))
 
 (defn random-point 
   "Get random set of coordinates"
@@ -113,14 +116,15 @@
       (let [thresh? (>= thresh-count (shared/min-cont-thresh))]
       (->> ant-path 
         (ant/ant-thresh? thresh?)
-        (ant/ant-end-point end-point)
+        (ant/ant-end-point (ant/path-loc-at-time ant-path (- i (shared/min-cont-thresh))))
         (ant/ant-local-min local-min)
         (ant/ant-local-max local-max)
-        (ant/ant-path-length i)))
+        (ant/ant-path-length (- i (shared/min-cont-thresh)))))
       (let [[x y] (ant/path-loc-at-time ant-path i)
             _  (when (or (< x 0) (< y 0)) (println ant-path))]
         (recur (inc i) 
-               (if (or (nil? (shared/thresh)) (> (image/pix-value  x y (shared/image-gry-ref)) (shared/thresh)))
+               (if (and (not (nil? (shared/thresh)))
+                       (> (image/pix-value  x y (shared/image-gry-ref)) (shared/thresh)))
                  (inc thresh-count)
                  0)
                [x y]

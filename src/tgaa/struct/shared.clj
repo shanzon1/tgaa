@@ -1,9 +1,10 @@
 (ns tgaa.struct.shared
   (:require [tgaa.struct.ant :as ant]))
 
+   #"C:\\Users\\erudi\\OneDrive\\Activity Organizer\\Projects\\Active\\TAA Research\\Project Resources\\images\\unprocessed\\3\\1\\3_1_1.jpg"
 
 (def trial-base {:trial-num 0
-                    :image-location "C:\\Users\\erudi\\OneDrive\\Activity Organizer\\Projects\\Active\\TAA Research\\Project Resources\\images\\unprocessed\\3\\1\\3_1_1.jpg"
+                    :image-location nil
                     :cand-paths []
                     :thresh 0})
 
@@ -29,6 +30,10 @@
 (defn min-path-len []
   (:min-path-len config))
 
+(defn min-esc-paths []
+  (:min-esc-update config))
+
+
 (defn get-num-trails []
   {:pre [(not (nil? (:num-trails config )))]}
   (:num-trails config))
@@ -53,6 +58,10 @@
   ([trial-num]
     (filter #(= (ant/ant-trial-num %) trial-num) (:cand-paths @trial-state))))
 
+(defn hull
+  ([] (:hull @trial-state))
+  ([hull] 
+    (reset! trial-state  (assoc @trial-state :hull hull))))
 
 (defn trial-info 
   [key value]
@@ -118,11 +127,8 @@
                    (:trial-num @trial-state)))))
 
 (defn image-loc []
-  {:pre [(not (nil? (:image-location  @trial-state)))]}
-  (:image-location  @trial-state))
-
-(defn save-image-loc [abs-path]
-  (reset! trial-state (assoc @trial-state :image-location abs-path)))
+  {:pre [(not (nil? (:image-location config)))]}
+  (:image-location  config))
 
 (defn save-image-gry-ref[image]
   (reset! trial-state (assoc @trial-state :image-grayscale image)))
@@ -152,3 +158,32 @@
 (defn num-ants []
   {:pre [(not (nil? (:num-ants config )))]}
   (:num-ants config))
+
+(defn time-start []
+   (reset! trial-state (assoc @trial-state 
+                              :start-time 
+                              (.getTime (java.util.Date.)))))
+
+(defn time-end []
+   (reset! trial-state (assoc @trial-state 
+                              :end-time 
+                              (.getTime (java.util.Date.)))))
+
+(defn run-time []
+  (- (:end-time @trial-state) (:start-time @trial-state)))
+ 
+(defn target-intensity[val]
+  (* val (case (:target-intensity config)
+           "LOW" -1
+           "HIGH"  1)))
+
+(defn num-eval-ants []
+  (:num-eval-ants config))
+
+(defn eval-paths
+ ([paths]
+   (reset! trial-state (assoc @trial-state
+                              :eval-paths
+                              paths)))
+ ([]
+   (:eval-paths @trial-state)))
