@@ -1,5 +1,5 @@
 (ns tgaa.algo.trial
-  (:require [tgaa.util.image :as image]
+  (:require [tgaa.struct.image :as image]
             [tgaa.struct.shared :as shared]
             [tgaa.struct.ant :as ant]))
 

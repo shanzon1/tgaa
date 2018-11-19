@@ -2,7 +2,7 @@
     (:require [tgaa.algo.ant-path :as ap]
               [tgaa.struct.shared :as shared]
               [tgaa.algo.trial :as trial]
-              [tgaa.util.image :as image]
+              [tgaa.struct.image :as image]
               [tgaa.util.filters :as filter]
               [tgaa.algo.analysis :as analysis]))
 
@@ -37,7 +37,7 @@
             (map 
               tgaa.algo.ant-path/proc-ant  
               (filter #(>
-                         (shared/thresh) (tgaa.util.image/pix-value (tgaa.struct.ant/ant-local-min %) (shared/image-gry-ref)))
+                         (shared/thresh) (image/pix-value (tgaa.struct.ant/ant-local-min %) (shared/image-gry-ref)))
                       (shared/canidates))))))
 
 (defn trapping []

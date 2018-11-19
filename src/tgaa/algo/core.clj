@@ -2,7 +2,8 @@
   (:import [java.awt.image BufferedImage]
            [tgaa.hull ConvexHull Point])
   (:require [tgaa.algo.phases :as phase]
-            [tgaa.struct.shared :as shared]))
+            [tgaa.struct.shared :as shared]
+            [tgaa.util.visualize :as  viz]))
 
 (defn process-image [] 
  (map doall [(shared/init-trail-state) 

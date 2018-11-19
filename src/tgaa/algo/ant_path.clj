@@ -1,6 +1,6 @@
 (ns tgaa.algo.ant-path
   (:require [tgaa.struct.shared :as shared]
-            [tgaa.util.image :as image]
+            [tgaa.struct.image :as image]
             [tgaa.algo.trial :as trial] 
             [tgaa.struct.ant :as ant])
   (:import [java.awt.image BufferedImage]))
