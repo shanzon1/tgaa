@@ -11,11 +11,11 @@
 
 (defn escaped-ants [ant-paths]
   (if-not (empty? ant-paths)
-    (filter #(and (not (ant/ant-thresh? %)) (< (shared/min-path-len) (ant/ant-path-length %))) ant-paths)))
+    (filter #(= (ant/ant-status %) ant/status-escaped)  ant-paths)))
 
 (defn trapped-ants [ant-paths]
   (if-not (empty? ant-paths)
-    (filter #(and (ant/ant-thresh? %) (< (shared/min-path-len) (ant/ant-path-length %)))  ant-paths)))
+    (filter #(= (ant/ant-status %) ant/status-trapped)  ant-paths)))
 
 (defn trial-max-local[ant-paths]
   "gets max values of all paths"

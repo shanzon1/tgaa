@@ -3,11 +3,12 @@
 
    #"C:\\Users\\erudi\\OneDrive\\Activity Organizer\\Projects\\Active\\TAA Research\\Project Resources\\images\\unprocessed\\3\\1\\3_1_1.jpg"
 
+(def no-threshold 1000)
+   
 (def trial-base {:trial-num 0
                     :image-location nil
                     :cand-paths []
-                    :thresh 0})
-
+                    :thresh no-threshold})
 
 (def trial-state (atom trial-base))
 

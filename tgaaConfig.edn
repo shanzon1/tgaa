@@ -1,5 +1,5 @@
 {
-:num-ants 300
+:num-ants 400
 :num-trails 20
 :num-eval-ants 1000
 :max-path-length 200

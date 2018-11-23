@@ -22,6 +22,11 @@
 (defn draw-ant-point [point graphic]
   (. graphic drawOval (first point) (second point) 2 2))
 
+(defn draw-header [string img-ref]
+    (let [g (image/build-graphic 1 "YELLOW" img-ref)]
+    (doall (image/draw-string string g 10 10))
+    img-ref))
+
 (defn draw-ant-end-pnts [ant-paths img-ref]
   (let [i (mi/copy img-ref)
         g (image/build-graphic 1 "YELLOW" i)
@@ -40,12 +45,6 @@
     (doall (map 
              #(draw-ant-path % g) ant-paths))
     img-ref))
-
-(defn draw-header [string img-ref]
-    (let [g (image/build-graphic 1 "YELLOW" img-ref)]
-    (doall (image/draw-string string g 10 10))
-    img-ref))
-  
 
 (defn filtered-draw-paths [ant-paths-filter-func color-name-str img-ref line-width]
     (draw-paths (filter ant-paths-filter-func (shared/canidates)) color-name-str img-ref line-width))

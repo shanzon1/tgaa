@@ -1,11 +1,14 @@
 (ns tgaa.struct.ant)
 
+(def status-trapped :trapped)
+(def status-escaped :escaped)
+(def status-dead :dead)
+(def status-forage :forage)
 (def dir-opt [[0 1][0 -1][1 0][-1 0][1 1][-1 -1][1 -1][-1 1]])
 
 (defn create-ant-path[]
   "Creates init ant path datastruct"
   {:id (gensym)})
-
 
 (defn ant-id [ant]
   (:id ant))
@@ -32,6 +35,12 @@
     (attribute-set-get :trial-num ant-path))
   ([value ant-path]
     (attribute-set-get :trial-num value ant-path)))
+
+(defn ant-status
+  ([ant-path]
+    (attribute-set-get :ant-status ant-path))
+  ([value ant-path]
+    (attribute-set-get :ant-status value ant-path)))
 
 (defn ant-end-point
   ([ant-path]

@@ -4,7 +4,8 @@
               [tgaa.algo.trial :as trial]
               [tgaa.struct.image :as image]
               [tgaa.util.filters :as filter]
-              [tgaa.algo.analysis :as analysis]))
+              [tgaa.algo.analysis :as analysis]
+              [tgaa.struct.ant :as ant]))
 
 (defn load-image []
   (do (shared/save-image-ref (image/get-image))
@@ -12,8 +13,9 @@
 
 (defn bootstrap[]
   (shared/update-thresh 
-    (apply max(trial/trial-max-local 
-               (ap/proc-all-ants (ap/init-trail-paths))))))
+    (apply max (trial/trial-max-local 
+                 (filter #(not= :dead (tgaa.struct.ant/ant-status %))
+                         (ap/proc-all-ants (ap/init-trail-paths)))))))
 
 (defn trapping-trial []
   (let [_ (shared/inc-trial)
@@ -28,20 +30,17 @@
         _ (when (not (nil? trial-thresh)) (> trial-thresh (shared/thresh))
             (shared/update-thresh trial-thresh))]))
 
-
-
 (defn reprocess-paths []
   "evaluation phase: prune paths that threshold omits and reprocess all paths with final threshold"
   (shared/eval-paths
-    (filter #(> (tgaa.struct.ant/ant-path-length %) (shared/min-path-len))
+    (filter #(=  ant/status-trapped (ant/ant-status %))
             (map 
               tgaa.algo.ant-path/proc-ant  
-              (filter #(>
-                         (shared/thresh) (image/pix-value (tgaa.struct.ant/ant-local-min %) (shared/image-gry-ref)))
+              (filter #(not=  ant/status-dead (ant/ant-status %))
                       (shared/canidates))))))
 
 (defn trapping []
-  (do (repeatedly (shared/get-num-trails) #(trapping-trial))))
+  (do (repeatedly (shared/get-num-trails) #(trapping-trial)) nil))
 
 (defn evaluation [] 
   (do (reprocess-paths)

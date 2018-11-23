@@ -11,23 +11,14 @@
       (= 0 dir)
       start
       (= 1 dir)
-      (+ start (- (shared/max-path-length) 1))
+      (+ start (dec (shared/max-path-length)))
       :else
-      (+ (- start  (shared/max-path-length)) 1)))
+      (- start (dec (shared/max-path-length)))))
 
 (defn rand-ant-dir 
   "Creates safe random direction at 45 deg increments with starting point x y"
-  [point] 
-   (let [dir (:dir-opt (first 
-               (filter #(let [lx (first (:last %))
-                              ly (second (:last %))]
-                          (and (>= lx 0) (>= ly 0) (< lx (image/image-width (shared/image-gry-ref))) (< ly (image/image-height (shared/image-gry-ref)))))
-                       (map (fn [d] {:last [(full-path-last-point (first point)(first d)) 
-                                                      (full-path-last-point (second point) (second d))] 
-                                          :dir-opt d})  (shuffle ant/dir-opt)))))]
-     (if (nil? dir)
-       (-> (Exception. "No Direction is Possible. Please Check configuration") throw)
-       dir)))
+  [point]
+  (rand-nth ant/dir-opt))
 
 (defn random-point 
   "Get random set of coordinates"
@@ -106,31 +97,56 @@
          (if (< ref-val comp-val)
           point-comp
           point-ref)))))     
-     
 
-; thesh-count causing issues with path length
+(defn create-ant-path [length ant-status end-point  local-min  local-max ant-path] 
+  (if  (= ant-status ant/status-dead)
+    (->> ant-path 
+        (ant/ant-thresh? false)
+        (ant/ant-status ant-status))
+    (->> ant-path 
+      (ant/ant-thresh? (= ant-status ant/status-trapped))
+      (ant/ant-end-point (ant/path-loc-at-time ant-path (- length (shared/min-cont-thresh))))
+      (ant/ant-local-min local-min)
+      (ant/ant-local-max local-max)
+                 (ant/ant-status ant-status)
+      (ant/ant-path-length (- length (shared/min-cont-thresh))))))
+
+(defn thresh-counter [x y thresh-count]
+  (if (and (not= (shared/thresh) shared/no-threshold)
+           (> (image/pix-value  x y (shared/image-gry-ref)) (shared/thresh)))
+    (inc thresh-count)
+    0))
+
+(defn path-status [length thresh-count ant-path]
+  (let [[x y] (ant/path-loc-at-time ant-path length)
+        iy (dec (image/image-height (shared/image-gry-ref)))
+        ix (dec (image/image-width (shared/image-gry-ref)))]
+    (cond 
+      (>= length  (shared/max-path-length)) 
+      ant/status-escaped
+      (and (>= thresh-count (shared/min-cont-thresh)) (> length (shared/min-path-len)))
+      ant/status-trapped
+      (or
+        (and (>= thresh-count (shared/min-cont-thresh)) (< length (shared/min-path-len)))
+        (> x ix)
+        (> y iy)
+        (< x 1)
+        (< y 1))
+      ant/status-dead
+      :else
+      ant/status-forage)))
+
 (defn proc-ant [ant-path]
   "Takes ants and image and generates logical paths"
-  (loop [i 0 thresh-count 0 end-point nil local-min nil local-max nil]
-    (if (or (>= i  (shared/max-path-length)) (>= thresh-count (shared/min-cont-thresh)))
-      (let [thresh? (>= thresh-count (shared/min-cont-thresh))]
-      (->> ant-path 
-        (ant/ant-thresh? thresh?)
-        (ant/ant-end-point (ant/path-loc-at-time ant-path (- i (shared/min-cont-thresh))))
-        (ant/ant-local-min local-min)
-        (ant/ant-local-max local-max)
-        (ant/ant-path-length (- i (shared/min-cont-thresh)))))
-      (let [[x y] (ant/path-loc-at-time ant-path i)
-            _  (when (or (< x 0) (< y 0)) (println ant-path))]
+  (loop [i 0 thresh-count 0 local-min nil local-max nil [x y] (ant/ant-start-point ant-path)]
+    (let [ant-status (path-status i thresh-count ant-path)]
+      (if (not= ant-status ant/status-forage)     
+        (create-ant-path i ant-status [x y] local-min  local-max ant-path)
         (recur (inc i) 
-               (if (and (not (nil? (shared/thresh)))
-                       (> (image/pix-value  x y (shared/image-gry-ref)) (shared/thresh)))
-                 (inc thresh-count)
-                 0)
-               [x y]
+               (thresh-counter x y thresh-count)
                (compare-two-points local-min [x y]  :less)
-               (compare-two-points local-max [x y]  :great))))))
-
+               (compare-two-points local-max [x y]  :great)
+               (ant/path-loc-at-time ant-path i))))))
 
 (defn proc-all-ants [ant-init]
   (if-not (empty? ant-init)
