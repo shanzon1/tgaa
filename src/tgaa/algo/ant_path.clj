@@ -15,6 +15,9 @@
       :else
       (- start (dec (shared/max-path-length)))))
 
+(defn window-boundaries [[x y] radius]
+  {:left (- x radius) :right (+ x radius) :up (- y radius) :down (+ y radius)})
+
 (defn rand-ant-dir 
   "Creates safe random direction at 45 deg increments with starting point x y"
   [point]
@@ -22,17 +25,17 @@
 
 (defn random-point 
   "Get random set of coordinates"
-  [num-loc]
-  (partition 2
-             (interleave 
-               (repeatedly 
-                      num-loc
-                      #(rand-int 
-                         (dec (image/image-width (shared/image-gry-ref)))))
-        (repeatedly 
-               num-loc 
-               #(rand-int 
-                  (dec (image/image-height (shared/image-gry-ref))))))))
+  ([num-loc ]
+    (random-point num-loc 0 (dec (image/image-width (shared/image-gry-ref))) 0 (dec (image/image-height (shared/image-gry-ref)))))
+  ([num-loc min-x max-x min-y max-y] 
+    (partition 2
+               (interleave 
+                 (repeatedly 
+                   num-loc
+                   #(+ min-x (rand-int  (- max-x min-x))))
+                 (repeatedly 
+                   num-loc 
+                   #(+ min-y (rand-int (- max-y min-y))))))))
 
 (defn ant-path [start-point]
   "Creates an ant path"
@@ -113,29 +116,32 @@
 
 (defn thresh-counter [x y thresh-count]
   (if (and (not= (shared/thresh) shared/no-threshold)
-           (> (image/pix-value  x y (shared/image-gry-ref)) (shared/thresh)))
+           (> (image/pix-value  x y (shared/image-ref)) (shared/thresh)))
     (inc thresh-count)
     0))
 
-(defn path-status [length thresh-count ant-path]
-  (let [[x y] (ant/path-loc-at-time ant-path length)
-        iy (dec (image/image-height (shared/image-gry-ref)))
-        ix (dec (image/image-width (shared/image-gry-ref)))]
-    (cond 
-      (>= length  (shared/max-path-length)) 
-      ant/status-escaped
-      (and (>= thresh-count (shared/min-cont-thresh)) (> length (shared/min-path-len)))
-      ant/status-trapped
-      (or
-        (and (>= thresh-count (shared/min-cont-thresh)) (< length (shared/min-path-len)))
-        (> x ix)
-        (> y iy)
-        (< x 1)
-        (< y 1))
-      ant/status-dead
-      :else
-      ant/status-forage)))
-
+(defn path-status 
+  ([time thresh-count ant-path]
+    (path-status time thresh-count (shared/max-path-length) (shared/min-path-len) (shared/min-cont-thresh)  ant-path))
+  ([time thresh-count max-path-length min-path-len min-cont-thresh ant-path]
+    (let [[x y] (ant/path-loc-at-time ant-path time)
+          iy (dec (image/image-height (shared/image-gry-ref)))
+          ix (dec (image/image-width (shared/image-gry-ref)))]
+      (cond 
+        (>= time max-path-length) 
+        ant/status-escaped
+        (and (>= thresh-count min-cont-thresh) (> time min-path-len))
+        ant/status-trapped
+        (or
+          (and (>= thresh-count min-cont-thresh) (< time min-path-len))
+          (> x ix)
+          (> y iy)
+          (< x 1)
+          (< y 1))
+        ant/status-dead
+        :else
+        ant/status-forage))))
+  
 (defn proc-ant [ant-path]
   "Takes ants and image and generates logical paths"
   (loop [i 0 thresh-count 0 local-min nil local-max nil [x y] (ant/ant-start-point ant-path)]
@@ -148,9 +154,35 @@
                (compare-two-points local-max [x y]  :great)
                (ant/path-loc-at-time ant-path i))))))
 
+(defn window-ant-paths [wind-center-pnt wind-rad num-paths]
+  "creates ants paths with staring points within the window"
+  (let [{:keys [left right up down]} (window-boundaries wind-center-pnt wind-rad)]
+    (for [ip (random-point num-paths left right up down)]
+      (ant-path ip))))
+
+(defn proc-gtaa-path [ant-path wind-radius]
+  "Takes ants and image and generates logical paths"
+  (let [ start (ant/ant-start-point ant-path)
+        start-val (image/pix-value start (shared/image-gry-ref))]
+    (loop [i 0 thresh-count start-val local-min nil local-max nil [x y] start]
+      (let [ant-status (path-status i thresh-count wind-radius (int (/ wind-radius 2)) 5 ant-path)]
+        (if (not= ant-status ant/status-forage)     
+          (create-ant-path i ant-status [x y] local-min  local-max ant-path)
+          (recur (inc i) 
+                 (thresh-counter x y thresh-count)
+                 (compare-two-points local-min [x y]  :less)
+                 (compare-two-points local-max [x y]  :great)
+                 (ant/path-loc-at-time ant-path i)))))))
+  
 (defn proc-all-ants [ant-init]
   (if-not (empty? ant-init)
     (let [paths (map #(proc-ant %) ant-init)]
       paths)))
 
-
+(defn reprocess-paths [ant-paths]
+  "evaluation phase: prune paths that threshold omits and reprocess all paths with final threshold"
+  (filter #(=  ant/status-trapped (ant/ant-status %))
+          (map 
+            proc-ant  
+            (filter #(not=  ant/status-dead (ant/ant-status %))
+                    ant-paths))))

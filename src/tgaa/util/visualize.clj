@@ -12,6 +12,7 @@
             [java.awt BasicStroke]
             [java.awt Color]))
 
+(import 'java.awt.Color)
 
 (defn show-image []
   (mi/show (shared/image-ref)))
@@ -20,7 +21,7 @@
   (. graphic drawLine (first start) (second start) (first end) (second end)))
 
 (defn draw-ant-point [point graphic]
-  (. graphic drawOval (first point) (second point) 2 2))
+  (. graphic fillOval (dec (first point)) (dec (second point)) 3 3))
 
 (defn draw-header [string img-ref]
     (let [g (image/build-graphic 1 "YELLOW" img-ref)]
@@ -66,8 +67,23 @@
              (shared/eval-paths) 
              (draw-ant-end-pnts (shared/eval-paths) (shared/image-gry-ref)))))
 
+(defn show-all-boundry-pnts []
+  "Displays start and end points for all cannidate paths"
+  (mi/show (draw-ant-start-pnts
+             (shared/canidates) 
+             (draw-ant-end-pnts (shared/canidates) (shared/image-gry-ref)))))
+
+
+
+(defn show-all-boundry-pnts-cann []
+  "Displays start and end points for all cannidate paths"
+  (mi/show (draw-ant-start-pnts
+             (shared/canidates) 
+             (draw-ant-end-pnts (shared/canidates) (draw-paths (shared/canidates) "GREEN" (shared/image-gry-ref) 1)))))
+
 (defn show-eval-paths[]
   (mi/show (draw-eval-paths)))
+
 
 (defn draw-can-paths
   ([]
@@ -85,7 +101,7 @@
    ([theshold]
     (mi/show ((filter/threshold theshold) (shared/image-ref))))
   ([]
-  (show-segmentaton (shared/thresh))))
+  (show-segmentaton (/ (shared/thresh) 2))))
 
 
 (defn show-cann-path
@@ -122,6 +138,10 @@
   (mikera.image.core/show
     (draw-boundary (mikera.image.core/copy (tgaa.struct.shared/image-ref))
                    (tgaa.struct.shared/hull))))
+
+(defn show-salient-paths[]
+  (mikera.image.core/show
+    (draw-paths (shared/salient-ids) "YELLOW" (mikera.image.core/copy (tgaa.struct.shared/image-ref)) 2)))
 
 (defn show-image []
   (mi/show (shared/image-ref)))

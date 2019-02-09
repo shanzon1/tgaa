@@ -6,16 +6,12 @@
             [tgaa.util.visualize :as  viz]))
 
 (defn process-image [] 
- (do (shared/init-trail-state) 
-     (phase/load-image) 
-     (shared/time-start)
-     (phase/bootstrap) 
-     (shared/update-thresh 1)
-     (phase/trapping) 
-     (phase/evaluation)
-     (shared/time-end)
-     ;(phase/analysis-hull)
-     ))
-
-        
-;(tgaa.util.image/anim-trail-paths)
+ (let[_ (shared/init-trail-state) 
+     _ (phase/load-image) 
+     _ (shared/time-start)
+     _ (phase/bootstrap) 
+     _ (phase/trapping) 
+     _ (phase/evaluation)
+     _ (shared/time-end)
+     ]
+     (viz/animate-algo)))

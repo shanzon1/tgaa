@@ -30,24 +30,25 @@
         _ (when (not (nil? trial-thresh)) (> trial-thresh (shared/thresh))
             (shared/update-thresh trial-thresh))]))
 
-(defn reprocess-paths []
-  "evaluation phase: prune paths that threshold omits and reprocess all paths with final threshold"
-  (shared/eval-paths
-    (filter #(=  ant/status-trapped (ant/ant-status %))
-            (map 
-              tgaa.algo.ant-path/proc-ant  
-              (filter #(not=  ant/status-dead (ant/ant-status %))
-                      (shared/canidates))))))
+
 
 (defn trapping []
-  (do (repeatedly (shared/get-num-trails) #(trapping-trial)) nil))
+  (do (repeatedly 
+        (shared/get-num-trails) #(trapping-trial))))
+
+(defn evaluation-2 [] 
+    (analysis/salient-regions))
 
 (defn evaluation [] 
-  (do (reprocess-paths)
-    (analysis/salient-regions)) nil)
+ (shared/eval-paths 
+   (ap/reprocess-paths (shared/canidates))))
+
+(defn evaluation-3 [] 
+  (let [img ((tgaa.util.filters/edge) ((tgaa.util.filters/threshold (int (/ (shared/thresh) 2))) (shared/image-ref)))]
+    img))
 
 (defn analysis-hull[]
   "returns set of points representing the hull"
-  (shared/hull (analysis/convex-hull (shared/canidates (shared/get-num-trails)))))
+  (doall (shared/hull (analysis/convex-hull (shared/canidates (shared/get-num-trails)))) nil))
 ;;; not exicuting!!!!
 

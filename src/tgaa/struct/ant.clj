@@ -18,6 +18,12 @@
       (key-name (first in))
       (assoc (second in) key-name (first in))))
 
+(defn ant-cluster
+  ([ant-path]
+    (attribute-set-get :ant-cluster ant-path))
+  ([value ant-path]
+    (attribute-set-get :ant-cluster value ant-path)))
+
 (defn ant-group
   ([ant-path]
     (attribute-set-get :group ant-path))

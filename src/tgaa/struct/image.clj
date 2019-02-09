@@ -42,6 +42,16 @@
   ([[x y] image]
     (pix-value x y image)))
 
+(defn pix-value-upd 
+  ([x y val image]
+  {:pre [(and (is (< x (. image getWidth))) 
+              (is (<= 0 x)) 
+              (is(< y (. image getHeight))) 
+              (is (<= 0 y)))]}
+  (. image setRGB x y val))
+  ([[x y] val image]
+    (pix-value-upd x y val image)))
+
 (defn image-height [image]
   (. image getHeight))
 

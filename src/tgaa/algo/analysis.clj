@@ -33,6 +33,7 @@
                  working-non-group))))))
 
 (defn make-groups [cann-path]
+  "Creates groups based on paths crossing"
   (loop [non-group cann-path groups [] meta-data {} group-id 0]
     (if (empty? non-group)
       {:groups groups :group-data meta-data}
@@ -43,14 +44,24 @@
                (inc group-id))))))
 
 (defn salient-regions []
+  "paths by salient region with minimal crossings"
   (let [groups (make-groups 
                  (shared/eval-paths))
         min-conn-group-ids (apply hash-map (flatten (filter #(>= (second %)( shared/min-conn-thresh)) (:group-data groups))))]
     (do (shared/salient-results min-conn-group-ids)
-      (shared/salient-ids (:groups groups)))))
-        
-   
-    
+      (shared/salient-ids  (filter #(get (apply hash-map (flatten (shared/salient-results))) (keyword (str (:group %)))) (:groups groups))))))
+
+(defn get-att-point-avg [att-key]
+  (int (/ (apply + 
+                 (map #(image/pix-value (att-key %) (shared/image-ref)) (shared/canidates))) 
+          (count (shared/canidates)))))
+ 
+(defn min-pxl-avg-can []
+  (get-att-point-avg :local-min))
+
+(defn max-pxl-avg-can []
+  (get-att-point-avg :local-max))
+
 (defn convex-hull [paths]
   (let[points (map #(Point. (first %) (second %))(map ant/ant-end-point paths))
        cnvx (ConvexHull. (into-array tgaa.hull.Point points))
