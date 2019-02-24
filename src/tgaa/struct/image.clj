@@ -1,21 +1,20 @@
 (ns tgaa.struct.image
-    (:require [tgaa.struct.shared :as shared]
+  (:require [tgaa.struct.shared :as shared]
             [clojure.test :refer [is]]
             [tgaa.util.filters :as filter]
             [clojure.string :refer [upper-case]]
             [tgaa.struct.ant :as ant]
             [mikera.image.core :as mi])
-  (:import [javax.imageio ImageIO]
-            [java.io File]
-            [java.awt.image BufferedImage]
-            [java.awt BasicStroke]
-            [java.awt Color]))
+  (:import  (javax.imageio ImageIO)
+            (java.io File)
+            (java.awt.image BufferedImage)
+            (java.awt Color BasicStroke Polygon)))
 
-(import 'java.awt.Color)
-(import 'java.awt.Polygon)
-
-
-
+(defn load-import[]
+  (do
+    (clojure.core/import*
+      "java.awt.Color")))
+  
 (defn get-image [& abs-path]
   "Takes a map with :imageLocation and returns assocated BufferedImage"
   (let [ path (if (empty? abs-path) 

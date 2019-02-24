@@ -7,5 +7,6 @@
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [net.mikera/clisk "0.11.0"]
                  [net.mikera/imagez "0.12.0"]
-                 [incanter "1.9.3"]]
+                 [incanter "1.9.3"]
+                 [rm-hull/clustering "0.2.0"]]
   :java-source-paths ["java"])

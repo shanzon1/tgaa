@@ -3,15 +3,43 @@
            [tgaa.hull ConvexHull Point])
   (:require [tgaa.algo.phases :as phase]
             [tgaa.struct.shared :as shared]
-            [tgaa.util.visualize :as  viz]))
+            [tgaa.util.visualize :as  viz]
+            [tgaa.util.gui :as gui]))
+
+;resolve repl dynamic import issue
+(tgaa.struct.image/load-import)
 
 (defn process-image [] 
- (let[_ (shared/init-trail-state) 
-     _ (phase/load-image) 
-     _ (shared/time-start)
-     _ (phase/bootstrap) 
-     _ (phase/trapping) 
-     _ (phase/evaluation)
-     _ (shared/time-end)
-     ]
-     (viz/animate-algo)))
+  (do 
+    (shared/time-start)
+    (dorun (phase/bootstrap)) 
+    (dorun (phase/trapping))
+    (dorun (phase/evaluation))
+    (shared/time-end)))
+
+(defn process-setup []
+  (do (dorun (shared/init-trail-state))
+        (shared/image-loc 
+          (str (gui/sys-view-ref "Select Image to process" :file)))
+        (dorun (phase/load-image))))
+
+(defn run-animation [] 
+  (if (= (gui/option-dialog "Run animation?") 0)
+    (viz/animate-algo)))
+
+(defn show-results[]
+  (if (= (gui/option-dialog "Show Results?") 0)
+    (viz/show-val-end-pnts)))
+
+
+(defn run-as-app []
+  (loop [quit? 0]
+    (if (not= quit? 0)
+      nil
+      (recur (do 
+               (process-setup)
+               (process-image)
+               (run-animation)
+               (show-results)
+               (gui/option-dialog "Process another image?"))))))
+

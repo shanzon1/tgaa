@@ -31,15 +31,15 @@
             (shared/update-thresh trial-thresh))]))
 
 
-
 (defn trapping []
   (do (repeatedly 
         (shared/get-num-trails) #(trapping-trial))))
 
-(defn evaluation-2 [] 
-    (analysis/salient-regions))
-
 (defn evaluation [] 
+  (do (shared/eval-paths (ap/reprocess-paths (shared/canidates)))
+    (analysis/salient-regions)))
+
+(defn evaluation-1 [] 
  (shared/eval-paths 
    (ap/reprocess-paths (shared/canidates))))
 

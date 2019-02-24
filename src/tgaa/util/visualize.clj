@@ -12,8 +12,6 @@
             [java.awt BasicStroke]
             [java.awt Color]))
 
-(import 'java.awt.Color)
-
 (defn show-image []
   (mi/show (shared/image-ref)))
 
@@ -131,17 +129,20 @@
 
 (defn draw-final-boundary[]
   (mikera.image.core/show
-    (draw-boundary (mikera.image.core/copy (tgaa.struct.shared/image-ref))
-                   (tgaa.struct.shared/hull))))
+    (draw-boundary (mikera.image.core/copy (shared/image-ref))
+                   (shared/hull))))
 
 (defn draw-ant-paths[]
   (mikera.image.core/show
-    (draw-boundary (mikera.image.core/copy (tgaa.struct.shared/image-ref))
-                   (tgaa.struct.shared/hull))))
+    (draw-boundary (mikera.image.core/copy (shared/image-ref))
+                   (shared/hull))))
 
-(defn show-salient-paths[]
-  (mikera.image.core/show
-    (draw-paths (shared/salient-ids) "YELLOW" (mikera.image.core/copy (tgaa.struct.shared/image-ref)) 2)))
+(defn show-salient-paths
+  ([]
+    (mikera.image.core/show
+      (draw-paths (shared/salient-ids) "YELLOW" (mikera.image.core/copy (shared/image-ref)) 2)))
+  ([group-num] (mikera.image.core/show
+             (draw-paths (filter #(= (:group %) group-num) (shared/salient-ids)) "YELLOW" (mikera.image.core/copy (shared/image-ref)) 2))))
 
 (defn show-image []
   (mi/show (shared/image-ref)))

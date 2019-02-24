@@ -127,9 +127,13 @@
                  (inc 
                    (:trial-num @trial-state)))))
 
-(defn image-loc []
-  {:pre [(not (nil? (:image-location config)))]}
-  (:image-location  config))
+(defn image-loc 
+  ([]
+    (if (or (nil? (:image-location  config)) (not (nil? (:image-location  @trial-state))))
+      (:image-location  @trial-state)
+      (:image-location  config)))
+  ([image-loc]
+    (reset! trial-state (assoc @trial-state :image-location image-loc))))
 
 (defn save-image-gry-ref[image]
   (reset! trial-state (assoc @trial-state :image-grayscale image)))
