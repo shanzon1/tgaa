@@ -24,7 +24,7 @@
         (dorun (phase/load-image))))
 
 (defn run-animation [] 
-  (if (= (gui/option-dialog "Run animation?") 0)
+    (if (= (gui/option-dialog "Run animation?") 0 )
     (viz/animate-algo)))
 
 (defn show-results[]

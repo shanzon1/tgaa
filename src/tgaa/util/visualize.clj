@@ -11,6 +11,8 @@
             [java.awt.image BufferedImage]
             [java.awt BasicStroke]
             [java.awt Color]))
+(def line-size 3)
+(def dot-size 6)
 
 (defn show-image []
   (mi/show (shared/image-ref)))
@@ -19,11 +21,12 @@
   (. graphic drawLine (first start) (second start) (first end) (second end)))
 
 (defn draw-ant-point [point graphic]
-  (. graphic fillOval (dec (first point)) (dec (second point)) 3 3))
+  (let [offset (int (/ dot-size 2))]
+  (. graphic fillOval (- (first point) offset) (- (second point) offset)  dot-size dot-size)))
 
 (defn draw-header [string img-ref]
     (let [g (image/build-graphic 1 "YELLOW" img-ref)]
-    (doall (image/draw-string string g 10 10))
+    (doall (image/draw-string string g dot-size dot-size))
     img-ref))
 
 (defn draw-ant-end-pnts [ant-paths img-ref]

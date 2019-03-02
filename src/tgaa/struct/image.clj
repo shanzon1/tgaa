@@ -15,6 +15,8 @@
     (clojure.core/import*
       "java.awt.Color")))
   
+
+
 (defn get-image [& abs-path]
   "Takes a map with :imageLocation and returns assocated BufferedImage"
   (let [ path (if (empty? abs-path) 
@@ -30,6 +32,8 @@
    (let [ out-image (BufferedImage. (. image getWidth) (. image getHeight) (. BufferedImage TYPE_BYTE_GRAY))
           _ (. (. out-image getGraphics) drawImage image 0 0 nil)]
      out-image))
+
+
 
 (defn pix-value 
   ([x y image]

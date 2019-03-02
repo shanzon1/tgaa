@@ -3,12 +3,11 @@
 :num-trails 20
 :num-eval-ants 1000
 :max-path-length 160
-:min-path-len 80
+:min-path-len 40
 :target-intensity "HIGH" 
 :plac-heur 0.1
 :min-conn-thresh 20
-:min-cont-thresh 10
+:min-cont-thresh 5
 :debug true
 :min-esc-update 10
-:image-location "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Image Testing\\1_3_12_c.jpg"
 }
