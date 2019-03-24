@@ -9,6 +9,7 @@
                                 JOptionPane/YES_NO_CANCEL_OPTION JOptionPane/QUESTION_MESSAGE
                                 nil nil nil))
 
+
 (defn sys-view-ref
   ([title]
     (sys-view-ref title :folder nil))
@@ -27,3 +28,8 @@
       (if (= retval JFileChooser/APPROVE_OPTION)
         (.getSelectedFile jfc)
         nil))))
+
+
+(defn sys-folder-all-files [title]
+  (vec (file-seq 
+         (sys-view-ref title))))

@@ -4,7 +4,8 @@
   (:require [tgaa.algo.phases :as phase]
             [tgaa.struct.shared :as shared]
             [tgaa.util.visualize :as  viz]
-            [tgaa.util.gui :as gui]))
+            [tgaa.util.gui :as gui]
+            [tgaa.util.dice-metric-analysis :as dm]))
 
 ;resolve repl dynamic import issue
 (tgaa.struct.image/load-import)
@@ -29,8 +30,11 @@
 
 (defn show-results[]
   (if (= (gui/option-dialog "Show Results?") 0)
-    (viz/show-val-end-pnts)))
+    (viz/show-prediction-pnts)))
 
+(defn derive-metric []
+  (if (= (gui/option-dialog "Get Dice Metric?") 0)
+    (dm/dice-metric (dm/perform-dice))))
 
 (defn run-as-app []
   (loop [quit? 0]
@@ -41,5 +45,6 @@
                (process-image)
                (run-animation)
                (show-results)
+               (derive-metric)
                (gui/option-dialog "Process another image?"))))))
 

@@ -12,7 +12,7 @@
             [java.awt BasicStroke]
             [java.awt Color]))
 (def line-size 3)
-(def dot-size 6)
+
 
 (defn show-image []
   (mi/show (shared/image-ref)))
@@ -20,26 +20,32 @@
 (defn draw-ant-path [{:keys [start end]} graphic]
   (. graphic drawLine (first start) (second start) (first end) (second end)))
 
-(defn draw-ant-point [point graphic]
-  (let [offset (int (/ dot-size 2))]
-  (. graphic fillOval (- (first point) offset) (- (second point) offset)  dot-size dot-size)))
+(defn draw-ant-point [point graphic draw-weight]
+  (let [offset (Math/round (/ draw-weight 2.0))]
+  (. graphic fillOval (- (first point) offset) (- (second point) offset)  draw-weight draw-weight)))
 
 (defn draw-header [string img-ref]
     (let [g (image/build-graphic 1 "YELLOW" img-ref)]
-    (doall (image/draw-string string g dot-size dot-size))
+    (doall (image/draw-string string g 10 10))
     img-ref))
 
-(defn draw-ant-end-pnts [ant-paths img-ref]
-  (let [i (mi/copy img-ref)
-        g (image/build-graphic 1 "YELLOW" i)
-        _  (doall (map #(draw-ant-point (ant/ant-end-point %) g) ant-paths))
-        _ (draw-header "Ant end points." i)]   
-    i))
+(defn draw-ant-end-pnts 
+  ([ant-paths img-ref line-size header]
+    (let [i (mi/copy img-ref)
+          g (image/build-graphic line-size "YELLOW" i)
+          _  (doall (map #(draw-ant-point (ant/ant-end-point %) g line-size) ant-paths))
+          _ (draw-header "Ant end points." i)]   
+      i))
+  ([ant-paths img-ref line-size]
+    (let [i (mi/copy img-ref)
+          g (image/build-graphic line-size "YELLOW" i)
+          _  (doall (map #(draw-ant-point (ant/ant-end-point %) g line-size) ant-paths))]   
+      i)))
 
-(defn draw-ant-start-pnts [ant-paths img-ref]
+(defn draw-ant-start-pnts [ant-paths img-ref line-size]
   (let [i (mi/copy img-ref)
         g (image/build-graphic 1 "BLUE" i)
-        _  (doall (map #(draw-ant-point (ant/ant-start-point %) g) ant-paths))]
+        _  (doall (map #(draw-ant-point (ant/ant-start-point %) g line-size) ant-paths))]
   i))
 
 (defn draw-paths [ant-paths color-name-str img-ref line-width]
@@ -51,40 +57,50 @@
 (defn filtered-draw-paths [ant-paths-filter-func color-name-str img-ref line-width]
     (draw-paths (filter ant-paths-filter-func (shared/canidates)) color-name-str img-ref line-width))
 
-(defn draw-eval-paths []
+(defn draw-eval-paths 
+  ([]
+  (let [i (mi/copy (shared/image-ref))
+    _ (draw-paths (shared/eval-paths) "YELLOW" i 2)]
+   i ))
+    ([header]
   (let [i (mi/copy (shared/image-ref))
     _ (draw-paths (shared/eval-paths) "YELLOW" i 2)
-    _ (draw-header (str "Pruned paths.") i)]
-   i ))
+    _ (draw-header (str header) i)]
+   i )))
 
 (defn show-val-end-pnts []
-  (mi/show (draw-ant-end-pnts (shared/eval-paths) (shared/image-gry-ref))))
+  (mi/show (draw-ant-end-pnts (shared/eval-paths) (shared/image-gry-ref) 2 "Ant end points.")))
+
+(defn show-prediction-pnts []
+  (mi/show (draw-ant-end-pnts (shared/eval-paths) (shared/image-gry-ref) 8)))
 
 (defn show-val-start-pnts []
-  (mi/show (draw-ant-start-pnts (shared/eval-paths) (shared/image-gry-ref))))
+  (mi/show (draw-ant-start-pnts (shared/eval-paths) (shared/image-gry-ref) 1)))
 
 (defn show-val-boundry-pnts []
   (mi/show (draw-ant-start-pnts
              (shared/eval-paths) 
-             (draw-ant-end-pnts (shared/eval-paths) (shared/image-gry-ref)))))
+             (draw-ant-end-pnts (shared/eval-paths) (shared/image-gry-ref) 1 "Ant end points."))))
 
 (defn show-all-boundry-pnts []
   "Displays start and end points for all cannidate paths"
   (mi/show (draw-ant-start-pnts
              (shared/canidates) 
-             (draw-ant-end-pnts (shared/canidates) (shared/image-gry-ref)))))
+             (draw-ant-end-pnts (shared/canidates) (shared/image-gry-ref) 3)3)))
 
 
 
 (defn show-all-boundry-pnts-cann []
   "Displays start and end points for all cannidate paths"
-  (mi/show (draw-ant-start-pnts
-             (shared/canidates) 
-             (draw-ant-end-pnts (shared/canidates) (draw-paths (shared/canidates) "GREEN" (shared/image-gry-ref) 1)))))
+  (mi/show (draw-ant-start-pnts (shared/canidates) 
+                                (draw-ant-end-pnts (shared/canidates) 
+                                                   (draw-paths (shared/canidates) "GREEN" (shared/image-gry-ref) 1) 1))))
 
 (defn show-eval-paths[]
-  (mi/show (draw-eval-paths)))
+  (mi/show (draw-eval-paths "Pruned paths.")))
 
+(defn show-eval-paths-result[]
+  (mi/show (draw-eval-paths)))
 
 (defn draw-can-paths
   ([]
@@ -157,4 +173,4 @@
     (Thread/sleep 2000) 
     (show-eval-paths)
     (Thread/sleep 2000) 
-    (show-val-end-pnts)))
+    (show-all-boundry-pnts)))

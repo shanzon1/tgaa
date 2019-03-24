@@ -10,6 +10,9 @@
             (java.awt.image BufferedImage)
             (java.awt Color BasicStroke Polygon)))
 
+(def white -1)
+(def black -16777216)
+
 (defn load-import[]
   (do
     (clojure.core/import*

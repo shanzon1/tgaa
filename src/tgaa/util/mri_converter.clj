@@ -12,22 +12,6 @@
 (def conv-att  [["-q" "95"] ["-z" "3"] ["-s" "yes"]])
 
 
-(defn get-dir
-  ([title]
-    (get-dir nil title))
-  ([dir title]
-    (let [jfc (new JFileChooser)
-          _ (. jfc setDialogTitle title)
-          crn-dir (if (nil? dir) 
-                    (. (. javax.swing.filechooser.FileSystemView getFileSystemView) getHomeDirectory)
-                    (new File dir))
-          _ (.  jfc setFileSelectionMode 1)
-          _  (. jfc setCurrentDirectory crn-dir) 
-          retval (.showOpenDialog jfc nil)]
-      (if (= retval JFileChooser/APPROVE_OPTION)
-        (.getSelectedFile jfc)
-        nil))))
-
 (defn extract-mri [dir]
      (filter #(= (last (clojure.string/split (str %) #"[.]"))  "IMA") (vec (file-seq dir))))
 
