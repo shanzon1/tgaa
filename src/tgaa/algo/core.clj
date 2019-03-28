@@ -32,9 +32,6 @@
   (if (= (gui/option-dialog "Show Results?") 0)
     (viz/show-prediction-pnts)))
 
-(defn derive-metric []
-  (if (= (gui/option-dialog "Get Dice Metric?") 0)
-    (dm/dice-metric (dm/perform-dice))))
 
 (defn run-as-app []
   (loop [quit? 0]
@@ -44,7 +41,10 @@
                (process-setup)
                (process-image)
                (run-animation)
-               (show-results)
-               (derive-metric)
+               (viz/show-eval-paths-result)
                (gui/option-dialog "Process another image?"))))))
 
+
+;(run-as-app)
+;(tgaa.util.dice-metric-analysis/dice-metric)
+;(tgaa.util.image-band-filter/convert-yellow-image)

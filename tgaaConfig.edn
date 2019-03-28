@@ -1,12 +1,12 @@
 {
 :num-ants 600
-:num-trails 20
+:num-trails 15
 :num-eval-ants 1000
-:max-path-length 120
-:min-path-len 50
+:max-path-length 100
+:min-path-len 40
 :target-intensity "HIGH" 
 :plac-heur 0.1
-:min-conn-thresh 20
+:min-conn-thresh 15
 :min-cont-thresh 10
 :debug true
 :min-esc-update 10

@@ -173,4 +173,5 @@
     (Thread/sleep 2000) 
     (show-eval-paths)
     (Thread/sleep 2000) 
-    (show-all-boundry-pnts)))
+    (show-all-boundry-pnts)
+    (Thread/sleep 2000)))

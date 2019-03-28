@@ -1,0 +1,1924 @@
+[
+{:dice 0.6055663072527878,
+  :diff-total-pred 8560,
+  :sample-pnts-missed 210,
+  :predicted-pnts-incorrect 8350,
+  :no-diff-pnts 79423,
+  :predicted-pnts-correctly 6571,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_1_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_1_19_YO.png",
+  :type :pred}
+ {:dice 0.5670310701956272,
+  :diff-total-pred 9030,
+  :sample-pnts-missed 22,
+  :predicted-pnts-incorrect 9008,
+  :no-diff-pnts 79611,
+  :predicted-pnts-correctly 5913,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_1_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_1_19_YO.png",
+  :type :pred}
+ {:dice 0.6270689577413971,
+  :diff-total-pred 8269,
+  :sample-pnts-missed 300,
+  :predicted-pnts-incorrect 7969,
+
+  :no-diff-pnts 79333,
+  :predicted-pnts-correctly 6952,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\1_1_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_1_19_YO.png",
+  :type :pred}
+ {:dice 0.9133375275243787,
+  :diff-total-pred 1102,
+  :sample-pnts-missed 128,
+  :predicted-pnts-incorrect 974,
+  :no-diff-pnts 87645,
+  :predicted-pnts-correctly 5807,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_1_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_1_19_YO.png",
+  :type :sample}
+ {:dice 0.8957306438158793,
+  :diff-total-pred 1375,
+  :sample-pnts-missed 1346,
+  :predicted-pnts-incorrect 29,
+  :no-diff-pnts 87273,
+  :predicted-pnts-correctly 5906,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop
+\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_1_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\1_1_19_YO.png",
+  :type :sample}
+ {:dice 0.9329437753865888,
+  :diff-total-pred 941,
+  :sample-pnts-missed 706,
+  :predicted-pnts-incorrect 235,
+  :no-diff-pnts 87067,
+  :predicted-pnts-correctly 6546,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_1_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\1_1_19_YO.png",
+  :type :sample}
+  
+  {:dice 0.8176424050632911,
+  :diff-total-pred 2766,
+  :sample-pnts-missed 915,
+  :predicted-pnts-incorrect 1851,
+  :no-diff-pnts 71680,
+  :predicted-pnts-correctly 6201,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_1_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_1_20_YO.png",
+  :type :pred}
+ {:dice 0.8038585209003215,
+  :diff-total-pred 3111,
+  :sample-pnts-missed 1434,
+  :predicted-pnts-incorrect 1677,
+  :no-diff-pnts 71161,
+  :predicted-pnts-correctly 6375,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_1_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_1_20_YO.png",
+  :type :pred}
+ {:dice 0.7744742567077592,
+  :diff-total-pred 4665,
+  :sample-pnts-missed 4623,
+  :predicted-pnts-incorrect 42,
+
+  :no-diff-pnts 67972,
+  :predicted-pnts-correctly 8010,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\1_1_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_1_20_YO.png",
+  :type :pred}
+ {:dice 0.9202010050251256,
+  :diff-total-pred 1191,
+  :sample-pnts-missed 942,
+  :predicted-pnts-incorrect 249,
+  :no-diff-pnts 72589,
+  :predicted-pnts-correctly 6867,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_1_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_1_20_YO.png",
+  :type :sample}
+ {:dice 0.7611779669308287,
+  :diff-total-pred 4882,
+  :sample-pnts-missed 4853,
+  :predicted-pnts-incorrect 29,
+  :no-diff-pnts 67985,
+  :predicted-pnts-correctly 7780,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\
+Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_1_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\1_1_20_YO.png",
+  :type :sample}
+ {:dice 0.7206440832447213,
+  :diff-total-pred 5517,
+  :sample-pnts-missed 5517,
+  :predicted-pnts-incorrect 0,
+  :no-diff-pnts 68014,
+  :predicted-pnts-correctly 7116,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_1_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\1_1_20_YO.png",
+  :type :sample}
+  {:dice 0.8746247512395858,
+  :diff-total-pred 3717,
+  :sample-pnts-missed 2845,
+  :predicted-pnts-incorrect 872,
+  :no-diff-pnts 73595,
+  :predicted-pnts-correctly 12965,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_3_4_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_3_4_YO.png",
+  :type :pred}
+ {:dice 0.8741867680912822,
+  :diff-total-pred 3771,
+  :sample-pnts-missed 3035,
+  :predicted-pnts-incorrect 736,
+  :no-diff-pnts 73405,
+  :predicted-pnts-correctly 13101,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_3_4_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_3_4_YO.png",
+  :type :pred}
+ {:dice 0.8941257774706289,
+  :diff-total-pred 3064,
+  :sample-pnts-missed 2165,
+  :predicted-pnts-incorrect 899,
+  :no-diff-pnts 74275,
+  :predicted-pnts-correctly 12938,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_3_4_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_3_4_YO.png",
+  :type :pred}
+ {:dice 0.9465973830839542,
+  :diff-total-pred 1706,
+  :sample-pnts-missed 1016,
+  :predicted-pnts-incorrect 690,
+  :no-diff-pnts 73451,
+  :predicted-pnts-correctly 15120,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_3_4_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_3_4_YO.png",
+  :type :sample}
+ {:dice 0.9320400781074938,
+  :diff-total-pred 2123,
+  :sample-pnts-missed 545,
+  :predicted-pnts-incorrect 1578,
+  :no-diff-pnts 73596,
+  :predicted-pnts-correctly 14558,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\T
+hesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_3_4_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_3_4_YO.png",
+  :type :sample}
+ {:dice 0.9283472972535826,
+  :diff-total-pred 2215,
+  :sample-pnts-missed 754,
+  :predicted-pnts-incorrect 1461,
+  :no-diff-pnts 73713,
+  :predicted-pnts-correctly 14349,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_3_4_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_3_4_YO.png",
+  :type :sample}
+  
+  {:dice 0.8811248682824026,
+  :diff-total-pred 3610,
+  :sample-pnts-missed 2579,
+  :predicted-pnts-incorrect 1031,
+  :no-diff-pnts 75711,
+  :predicted-pnts-correctly 13379,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_3_5_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_3_5_YO.png",
+  :type :pred}
+ {:dice 0.869788727979437,
+  :diff-total-pred 4154,
+  :sample-pnts-missed 3618,
+  :predicted-pnts-incorrect 536,
+  :no-diff-pnts 74672,
+  :predicted-pnts-correctly 13874,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\1_3_5_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_3_5_YO.png",
+  :type :pred}
+ {:dice 0.9002347829134107,
+  :diff-total-pred 2847,
+  :sample-pnts-missed 1282,
+  :predicted-pnts-incorrect 1565,
+  :no-diff-pnts 77008,
+  :predicted-pnts-correctly 12845,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\1_3_5_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_3_5_YO.png",
+  :type :pred}
+ {:dice 0.9009865470852018,
+  :diff-total-pred 3312,
+  :sample-pnts-missed 2423,
+  :predicted-pnts-incorrect 889,
+  :no-diff-pnts 74319,
+  :predicted-pnts-correctly 15069,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_3_5_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\1_3_5_YO.png",
+  :type :sample}
+ {:dice 0.8781428887694108,
+  :diff-total-pred 3853,
+  :sample-pnts-missed 244,
+  :predicted-pnts-incorrect 3609,
+  :no-diff-pnts 74964,
+  :predicted-pnts-correctly 13883,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\T
+hesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\1_3_5_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\1_3_5_YO.png",
+  :type :sample}
+ {:dice 0.9162705667276051,
+  :diff-total-pred 2519,
+  :sample-pnts-missed 344,
+  :predicted-pnts-incorrect 2175,
+  :no-diff-pnts 76398,
+  :predicted-pnts-correctly 13783,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_3_5_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\1_3_5_YO.png",
+  :type :sample}
+  
+  {:dice 0.7008547008547009,
+  :diff-total-pred 7350,
+  :sample-pnts-missed 7218,
+  :predicted-pnts-incorrect 132,
+  :no-diff-pnts 72619,
+  :predicted-pnts-correctly 8610,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_3_6_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_3_6_YO.png",
+  :type :pred}
+ {:dice 0.7565020228515538,
+  :diff-total-pred 5477,
+  :sample-pnts-missed 5243,
+  :predicted-pnts-incorrect 234,
+  :no-diff-pnts 74594,
+  :predicted-pnts-correctly 8508,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_3_6_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_3_6_YO.png",
+  :type :pred}
+ {:dice 0.7003269160915365,
+  :diff-total-pred 7425,
+  :sample-pnts-missed 7359,
+  :predicted-pnts-incorrect 66,
+  :no-diff-pnts
+ 72478,
+  :predicted-pnts-correctly 8676,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_3_6_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_3_6_YO.png",
+  :type :pred}
+ {:dice 0.9165962338145306,
+  :diff-total-pred 2467,
+  :sample-pnts-missed 195,
+  :predicted-pnts-incorrect 2272,
+  :no-diff-pnts 72556,
+  :predicted-pnts-correctly 13556,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_3_6_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_3_6_YO.png",
+  :type :sample}
+ {:dice 0.9155979319143221,
+  :diff-total-pred 2514,
+  :sample-pnts-missed 2399,
+  :predicted-pnts-incorrect 115,
+  :no-diff-pnts 72429,
+  :predicted-pnts-correctly 13636,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\
+Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_3_6_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_3_6_YO.png",
+  :type :sample}
+ {:dice 0.9347519066001319,
+  :diff-total-pred 2079,
+  :sample-pnts-missed 1143,
+  :predicted-pnts-incorrect 936,
+  :no-diff-pnts 71608,
+  :predicted-pnts-correctly 14892,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_3_6_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_3_6_YO.png",
+  :type :sample}
+  
+  {:dice 0.9044716313568353,
+  :diff-total-pred 2241,
+  :sample-pnts-missed 1671,
+  :predicted-pnts-incorrect 570,
+  :no-diff-pnts 74666,
+  :predicted-pnts-correctly 10609,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_5_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_5_YO.png",
+  :type :pred}
+ {:dice 0.8866041211498094,
+  :diff-total-pred 2647,
+  :sample-pnts-missed 1816,
+  :predicted-pnts-incorrect 831,
+  :no-diff-pnts 74521,
+  :predicted-pnts-correctly 10348,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_5_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_5_YO.png",
+  :type :pred}
+ {:dice 0.9084444444444444,
+  :diff-total-pred 2163,
+  :sample-pnts-missed 1715,
+  :predicted-pnts-incorrect 448,
+  :no-diff-pnts 74622,
+  :predicted-pnts-correctly 10731,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\1_4_5_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_5_YO.png",
+  :type :pred}
+ {:dice 0.9072983145148094,
+  :diff-total-pred 2266,
+  :sample-pnts-missed 1075,
+  :predicted-pnts-incorrect 1191,
+  :no-diff-pnts 74161,
+  :predicted-pnts-correctly 11089,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_5_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_5_YO.png",
+  :type :sample}
+ {:dice 0.9049167005282406,
+  :diff-total-pred 2340,
+  :sample-pnts-missed 1311,
+  :predicted-pnts-incorrect 1029,
+  :no-diff-pnts 74041,
+  :predicted-pnts-correctly 11135,
+  :sample-loc
+  "C:\\Users\\erudi\\Deskto
+p\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_5_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\1_4_5_YO.png",
+  :type :sample}
+ {:dice 0.9464531262638518,
+  :diff-total-pred 1324,
+  :sample-pnts-missed 745,
+  :predicted-pnts-incorrect 579,
+  :no-diff-pnts 74491,
+  :predicted-pnts-correctly 11701,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_5_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\1_4_5_YO.png",
+  :type :sample}
+  
+  {:dice 0.9291888162967171,
+  :diff-total-pred 1745,
+  :sample-pnts-missed 605,
+  :predicted-pnts-incorrect 1140,
+  :no-diff-pnts 81090,
+  :predicted-pnts-correctly 11449,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_4_6_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_6_YO.png",
+  :type :pred}
+ {:dice 0.898256401958008,
+  :diff-total-pred 2515,
+  :sample-pnts-missed 1028,
+  :predicted-pnts-incorrect 1487,
+  :no-diff-pnts 80667,
+  :predicted-pnts-correctly 11102,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_4_6_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_6_YO.png",
+  :type :pred}
+ {:dice 0.8674384841603693,
+  :diff-total-pred 3561,
+  :sample-pnts-missed 2623,
+  :predicted-pnts-incorrect 938,
+  :no-diff-pnts 79072,
+  :predicted-pnts-correctly 11651,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_4_6_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_6_YO.png",
+  :type :pred}
+ {:dice 0.9321038703274892,
+  :diff-total-pred 1642,
+  :sample-pnts-missed 859,
+  :predicted-pnts-incorrect 783,
+  :no-diff-pnts 81371,
+  :predicted-pnts-correctly 11271,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_4_6_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_4_6_YO.png",
+  :type :sample}
+ {:dice 0.8873655506741402,
+  :diff-total-pred 2974,
+  :sample-pnts-missed 2559,
+  :predicted-pnts-incorrect 415,
+  :no-diff-pnts 79595,
+  :predicted-pnts-correctly 11715,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Th
+esis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_4_6_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_4_6_YO.png",
+  :type :sample}
+ {:dice 0.8919021573989669,
+  :diff-total-pred 2846,
+  :sample-pnts-missed 2533,
+  :predicted-pnts-incorrect 313,
+  :no-diff-pnts 79697,
+  :predicted-pnts-correctly 11741,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_4_6_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_4_6_YO.png",
+  :type :sample}
+  
+  {:dice 0.8100627063930838,
+  :diff-total-pred 5119,
+  :sample-pnts-missed 593,
+  :predicted-pnts-incorrect 4526,
+  :no-diff-pnts 70989,
+  :predicted-pnts-correctly 10916,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_7_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_7_YO.png",
+  :type :pred}
+ {:dice 0.7993923171525718,
+  :diff-total-pred 5546,
+  :sample-pnts-missed 1154,
+  :predicted-pnts-incorrect 4392,
+  :no-diff-pnts 70428,
+  :predicted-pnts-correctly 11050,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_7_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_7_YO.png",
+  :type :pred}
+ {:dice 0.805272532953331,
+  :diff-total-pred 5466,
+  :sample-pnts-missed 1326,
+  :predicted-pnts-incorrect 4140,
+
+  :no-diff-pnts 70256,
+  :predicted-pnts-correctly 11302,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_4_7_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_7_YO.png",
+  :type :pred}
+ {:dice 0.9273394340657024,
+  :diff-total-pred 1723,
+  :sample-pnts-missed 1209,
+  :predicted-pnts-incorrect 514,
+  :no-diff-pnts 74306,
+  :predicted-pnts-correctly 10995,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_7_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_7_YO.png",
+  :type :sample}
+ {:dice 0.9126127577319588,
+  :diff-total-pred 2170,
+  :sample-pnts-missed 1297,
+  :predicted-pnts-incorrect 873,
+  :no-diff-pnts 73523,
+  :predicted-pnts-correctly 11331,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop
+\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_7_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_4_7_YO.png",
+  :type :sample}
+ {:dice 0.932013091933546,
+  :diff-total-pred 1641,
+  :sample-pnts-missed 1380,
+  :predicted-pnts-incorrect 261,
+  :no-diff-pnts 74135,
+  :predicted-pnts-correctly 11248,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_7_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_4_7_YO.png",
+  :type :sample}
+  
+  {:dice 0.8919889502762431,
+  :diff-total-pred 2346,
+  :sample-pnts-missed 1629,
+  :predicted-pnts-incorrect 717,
+  :no-diff-pnts 79155,
+  :predicted-pnts-correctly 9687,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 9\\1_4_8_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_8_YO.png",
+  :type :pred}
+ {:dice 0.8969977797084661,
+  :diff-total-pred 2134,
+  :sample-pnts-missed 1022,
+  :predicted-pnts-incorrect 1112,
+  :no-diff-pnts 79762,
+  :predicted-pnts-correctly 9292,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\1_4_8_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_8_YO.png",
+  :type :pred}
+ {:dice 0.8936624292474715,
+  :diff-total-pred 2292,
+  :sample-pnts-missed 1519,
+  :predicted-pnts-incorrect 773,
+  :no-diff-pnts 79265,
+  :predicted-pnts-correctly 9631,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\1_4_8_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_8_YO.png",
+  :type :pred}
+ {:dice 0.9355524734165511,
+  :diff-total-pred 1394,
+  :sample-pnts-missed 196,
+  :predicted-pnts-incorrect 1198,
+  :no-diff-pnts 79676,
+  :predicted-pnts-correctly 10118,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 9\\1_4_8_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\1_4_8_YO.png",
+  :type :sample}
+ {:dice 0.9321654863958256,
+  :diff-total-pred 1456,
+  :sample-pnts-missed 1146,
+  :predicted-pnts-incorrect 310,
+  :no-diff-pnts 79728,
+  :predicted-pnts-correctly 10004,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\
+Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\1_4_8_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\1_4_8_YO.png",
+  :type :sample}
+ {:dice 0.9472091159975073,
+  :diff-total-pred 1186,
+  :sample-pnts-missed 510,
+  :predicted-pnts-incorrect 676,
+  :no-diff-pnts 79362,
+  :predicted-pnts-correctly 10640,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 9\\1_4_8_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\1_4_8_YO.png",
+  :type :sample}
+  
+  {:dice 0.8858720662678325,
+  :diff-total-pred 2480,
+  :sample-pnts-missed 1708,
+  :predicted-pnts-incorrect 772,
+  :no-diff-pnts 77565,
+  :predicted-pnts-correctly 9625,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_9_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_9_YO.png",
+  :type :pred}
+ {:dice 0.9214292309112732,
+  :diff-total-pred 1702,
+  :sample-pnts-missed 1285,
+  :predicted-pnts-incorrect 417,
+  :no-diff-pnts 77988,
+  :predicted-pnts-correctly 9980,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\1_4_9_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_9_YO.png",
+  :type :pred}
+ {:dice 0.9228329809725159,
+  :diff-total-pred 1606,
+  :sample-pnts-missed 812,
+  :predicted-pnts-incorrect 794,
+  
+:no-diff-pnts 78461,
+  :predicted-pnts-correctly 9603,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\1_4_9_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_9_YO.png",
+  :type :pred}
+ {:dice 0.9191078856535977,
+  :diff-total-pred 1828,
+  :sample-pnts-missed 880,
+  :predicted-pnts-incorrect 948,
+  :no-diff-pnts 77457,
+  :predicted-pnts-correctly 10385,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_9_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\1_4_9_YO.png",
+  :type :sample}
+ {:dice 0.93690036900369,
+  :diff-total-pred 1368,
+  :sample-pnts-missed 259,
+  :predicted-pnts-incorrect 1109,
+  :no-diff-pnts 78146,
+  :predicted-pnts-correctly 10156,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thes
+is End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\1_4_9_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\1_4_9_YO.png",
+  :type :sample}
+ {:dice 0.9096008828398015,
+  :diff-total-pred 1966,
+  :sample-pnts-missed 524,
+  :predicted-pnts-incorrect 1442,
+  :no-diff-pnts 77813,
+  :predicted-pnts-correctly 9891,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_9_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\1_4_9_YO.png",
+  :type :sample}
+  
+  {:dice 0.9085642560587043,
+  :diff-total-pred 1894,
+  :sample-pnts-missed 1670,
+  :predicted-pnts-incorrect 224,
+  :no-diff-pnts 81432,
+  :predicted-pnts-correctly 9410,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_10_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_10_YO.png",
+  :type :pred}
+ {:dice 0.837752808988764,
+  :diff-total-pred 3610,
+  :sample-pnts-missed 3296,
+  :predicted-pnts-incorrect 314,
+  :no-diff-pnts 79806,
+  :predicted-pnts-correctly 9320,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_4_10_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_10_YO.png",
+  :type :pred}
+ {:dice 0.8516446632356232,
+  :diff-total-pred 3315,
+  :sample-pnts-missed 3196,
+  :predicted-pnts-incorrect 119,
+  :no-diff-pnts 79906,
+  :predicted-pnts-correctly 9515,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_4_10_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_10_YO.png",
+  :type :pred}
+ {:dice 0.9155131667792032,
+  :diff-total-pred 2002,
+  :sample-pnts-missed 1769,
+  :predicted-pnts-incorrect 233,
+  :no-diff-pnts 79887,
+  :predicted-pnts-correctly 10847,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_10_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_4_10_YO.png",
+  :type :sample}
+ {:dice 0.9085166028349193,
+  :diff-total-pred 2317,
+  :sample-pnts-missed 1206,
+  :predicted-pnts-incorrect 1111,
+  :no-diff-pnts 78914,
+  :predicted-pnts-correctly 11505,
+  :sample-loc
+  "C:\\Users\\erudi\\Deskto
+p\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_4_10_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_4_10_YO.png",
+  :type :sample}
+ {:dice 0.9110167710478752,
+  :diff-total-pred 2117,
+  :sample-pnts-missed 1874,
+  :predicted-pnts-incorrect 243,
+  :no-diff-pnts 79782,
+  :predicted-pnts-correctly 10837,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_10_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_4_10_YO.png",
+  :type :sample}
+  
+  {:dice 0.8474966029058221,
+  :diff-total-pred 2918,
+  :sample-pnts-missed 2647,
+  :predicted-pnts-incorrect 271,
+  :no-diff-pnts 78374,
+  :predicted-pnts-correctly 8108,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_4_11_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_11_YO.png",
+  :type :pred}
+ {:dice 0.7447576408241583,
+  :diff-total-pred 5587,
+  :sample-pnts-missed 5359,
+  :predicted-pnts-incorrect 228,
+  :no-diff-pnts 75662,
+  :predicted-pnts-correctly 8151,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_4_11_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_11_YO.png",
+  :type :pred}
+ {:dice 0.7294517562973939,
+  :diff-total-pred 6208,
+  :sample-pnts-missed 6198,
+  :predicted-pnts-incorrect 10,
+  :no-diff-pnts 74823,
+  :predicted-pnts-correctly 8369,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\1_4_11_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_11_YO.png",
+  :type :pred}
+ {:dice 0.8699773336080775,
+  :diff-total-pred 3155,
+  :sample-pnts-missed 2955,
+  :predicted-pnts-incorrect 200,
+  :no-diff-pnts 75690,
+  :predicted-pnts-correctly 10555,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_4_11_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_4_11_YO.png",
+  :type :sample}
+ {:dice 0.9018769811589556,
+  :diff-total-pred 2755,
+  :sample-pnts-missed 1906,
+  :predicted-pnts-incorrect 849,
+  :no-diff-pnts 73984,
+  :predicted-pnts-correctly 12661,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop
+\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_4_11_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\1_4_11_YO.png",
+  :type :sample}
+ {:dice 0.845430850643709,
+  :diff-total-pred 3914,
+  :sample-pnts-missed 3863,
+  :predicted-pnts-incorrect 51,
+  :no-diff-pnts 74782,
+  :predicted-pnts-correctly 10704,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_4_11_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\1_4_11_YO.png",
+  :type :sample}
+  
+  {:dice 0.8094581280788177,
+  :diff-total-pred 3868,
+  :sample-pnts-missed 3741,
+  :predicted-pnts-incorrect 127,
+  :no-diff-pnts 87744,
+  :predicted-pnts-correctly 8216,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_4_12_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_12_YO.png",
+  :type :pred}
+ {:dice 0.7074288160993363,
+  :diff-total-pred 6833,
+  :sample-pnts-missed 6751,
+  :predicted-pnts-incorrect 82,
+  :no-diff-pnts 84734,
+  :predicted-pnts-correctly 8261,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_4_12_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_12_YO.png",
+  :type :pred}
+ {:dice 0.7898743814236772,
+  :diff-total-pred 4416,
+  :sample-pnts-missed 4373,
+  :predicted-pnts-incorrect 43,
+  :no-diff-pnts 87112,
+  :predicted-pnts-correctly 8300,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_4_12_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_12_YO.png",
+  :type :pred}
+ {:dice 0.8575772182876636,
+  :diff-total-pred 3841,
+  :sample-pnts-missed 3448,
+  :predicted-pnts-incorrect 393,
+  :no-diff-pnts 84423,
+  :predicted-pnts-correctly 11564,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_4_12_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_4_12_YO.png",
+  :type :sample}
+ {:dice 0.8801878273433267,
+  :diff-total-pred 3317,
+  :sample-pnts-missed 489,
+  :predicted-pnts-incorrect 2828,
+  :no-diff-pnts 84327,
+  :predicted-pnts-correctly 12184,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop
+\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\1_4_12_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_4_12_YO.png",
+  :type :sample}
+ {:dice 0.9130328867235079,
+  :diff-total-pred 2142,
+  :sample-pnts-missed 1429,
+  :predicted-pnts-incorrect 713,
+  :no-diff-pnts 86442,
+  :predicted-pnts-correctly 11244,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\1_4_12_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\1_4_12_YO.png",
+  :type :sample}
+  
+  {:dice 0.8332669322709163,
+  :diff-total-pred 5022,
+  :sample-pnts-missed 3289,
+  :predicted-pnts-incorrect 1733,
+  :no-diff-pnts 72380,
+  :predicted-pnts-correctly 12549,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_4_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_19_YO.png",
+  :type :pred}
+ {:dice 0.882088795538495,
+  :diff-total-pred 3256,
+  :sample-pnts-missed 1153,
+  :predicted-pnts-incorrect 2103,
+  :no-diff-pnts 74516,
+  :predicted-pnts-correctly 12179,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_19_YO.png",
+  :type :pred}
+ {:dice 0.8622279867416054,
+  :diff-total-pred 3824,
+  :sample-pnts-missed 1508,
+  :predicted-pnts-incorrect 2316
+,
+  :no-diff-pnts 74161,
+  :predicted-pnts-correctly 11966,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_19_YO.png",
+  :type :pred}
+ {:dice 0.8887212889955434,
+  :diff-total-pred 3246,
+  :sample-pnts-missed 370,
+  :predicted-pnts-incorrect 2876,
+  :no-diff-pnts 73743,
+  :predicted-pnts-correctly 12962,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_4_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_19_YO.png",
+  :type :sample}
+ {:dice 0.9374020741625009,
+  :diff-total-pred 1678,
+  :sample-pnts-missed 910,
+  :predicted-pnts-incorrect 768,
+  :no-diff-pnts 75709,
+  :predicted-pnts-correctly 12564,
+  :sample-loc
+  "C:\\Users\\erudi\\Des
+ktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_19_YO.png",
+  :type :sample}
+ {:dice 0.8881004366812227,
+  :diff-total-pred 3280,
+  :sample-pnts-missed 458,
+  :predicted-pnts-incorrect 2822,
+  :no-diff-pnts 73655,
+  :predicted-pnts-correctly 13016,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_4_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_19_YO.png",
+  :type :sample}
+  
+  {:dice 0.9108903175530879,
+  :diff-total-pred 2287,
+  :sample-pnts-missed 1894,
+  :predicted-pnts-incorrect 393,
+  :no-diff-pnts 84584,
+  :predicted-pnts-correctly 11689,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_20_YO.png",
+  :type :pred}
+ {:dice 0.8473096737263881,
+  :diff-total-pred 4268,
+  :sample-pnts-missed 4028,
+  :predicted-pnts-incorrect 240,
+  :no-diff-pnts 82450,
+  :predicted-pnts-correctly 11842,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_4_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_20_YO.png",
+  :type :pred}
+ {:dice 0.8807021686936671,
+  :diff-total-pred 3031,
+  :sample-pnts-missed 2137,
+  :predicted-pnts-incorrect 894
+,
+  :no-diff-pnts 84341,
+  :predicted-pnts-correctly 11188,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\1_4_20_YO.png",
+  :type :pred}
+ {:dice 0.904763521542797,
+  :diff-total-pred 2805,
+  :sample-pnts-missed 2546,
+  :predicted-pnts-incorrect 259,
+  :no-diff-pnts 82431,
+  :predicted-pnts-correctly 13324,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_4_20_YO.png",
+  :type :sample}
+ {:dice 0.8752183593081007,
+  :diff-total-pred 3643,
+  :sample-pnts-missed 549,
+  :predicted-pnts-incorrect 3094,
+  :no-diff-pnts 82141,
+  :predicted-pnts-correctly 12776,
+  :sample-loc
+  "C:\\Users\\erudi\\Des
+ktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\1_4_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_20_YO.png",
+  :type :sample}
+ {:dice 0.9158614538427234,
+  :diff-total-pred 2264,
+  :sample-pnts-missed 1003,
+  :predicted-pnts-incorrect 1261,
+  :no-diff-pnts 83974,
+  :predicted-pnts-correctly 12322,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\1_4_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\1_4_20_YO.png",
+  :type :sample}
+  
+  {:dice 0.4609467997436132,
+  :diff-total-pred 5887,
+  :sample-pnts-missed 697,
+  :predicted-pnts-incorrect 5190,
+  :no-diff-pnts 82444,
+  :predicted-pnts-correctly 2517,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 9\\2_5_9_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_9_YO.png",
+  :type :pred}
+ {:dice 0.3605656730084444,
+  :diff-total-pred 6285,
+  :sample-pnts-missed 350,
+  :predicted-pnts-incorrect 5935,
+  :no-diff-pnts 82791,
+  :predicted-pnts-correctly 1772,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 8\\2_5_9_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_9_YO.png",
+  :type :pred}
+ {:dice 0.5058089127796082,
+  :diff-total-pred 5700,
+  :sample-pnts-missed 910,
+  :predicted-pnts-incorrect 4790,
+  
+:no-diff-pnts 82231,
+  :predicted-pnts-correctly 2917,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\2_5_9_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_9_YO.png",
+  :type :pred}
+ {:dice 0.7799850074962519,
+  :diff-total-pred 1174,
+  :sample-pnts-missed 41,
+  :predicted-pnts-incorrect 1133,
+  :no-diff-pnts 87593,
+  :predicted-pnts-correctly 2081,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 9\\2_5_9_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 8\\2_5_9_YO.png",
+  :type :sample}
+ {:dice 0.7103714910068919,
+  :diff-total-pred 1723,
+  :sample-pnts-missed 1714,
+  :predicted-pnts-incorrect 9,
+  :no-diff-pnts 87012,
+  :predicted-pnts-correctly 2113,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis En
+d Game\\Sampling\\Student Sampling\\volume student\\STUDENT 8\\2_5_9_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\2_5_9_YO.png",
+  :type :sample}
+ {:dice 0.8876580031245562,
+  :diff-total-pred 791,
+  :sample-pnts-missed 702,
+  :predicted-pnts-incorrect 89,
+  :no-diff-pnts 86932,
+  :predicted-pnts-correctly 3125,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 9\\2_5_9_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\2_5_9_YO.png",
+  :type :sample}
+  
+  {:dice 0.7137206235941984,
+  :diff-total-pred 3691,
+  :sample-pnts-missed 2766,
+  :predicted-pnts-incorrect 925,
+  :no-diff-pnts 86165,
+  :predicted-pnts-correctly 4601,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\2_5_14_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_14_YO.png",
+  :type :pred}
+ {:dice 0.7068905211612452,
+  :diff-total-pred 3352,
+  :sample-pnts-missed 1868,
+  :predicted-pnts-incorrect 1484,
+  :no-diff-pnts 87063,
+  :predicted-pnts-correctly 4042,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\2_5_14_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_14_YO.png",
+  :type :pred}
+ {:dice 0.655243445692884,
+  :diff-total-pred 3682,
+  :sample-pnts-missed 1655,
+  :predicted-pnts-incorrect 2027
+,
+  :no-diff-pnts 87276,
+  :predicted-pnts-correctly 3499,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 8\\2_5_14_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_14_YO.png",
+  :type :pred}
+ {:dice 0.7789410258341493,
+  :diff-total-pred 2935,
+  :sample-pnts-missed 739,
+  :predicted-pnts-incorrect 2196,
+  :no-diff-pnts 86351,
+  :predicted-pnts-correctly 5171,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\2_5_14_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\2_5_14_YO.png",
+  :type :sample}
+ {:dice 0.8608098336948662,
+  :diff-total-pred 1540,
+  :sample-pnts-missed 392,
+  :predicted-pnts-incorrect 1148,
+  :no-diff-pnts 88155,
+  :predicted-pnts-correctly 4762,
+  :sample-loc
+  "C:\\Users\\erudi\\Deskto
+p\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\2_5_14_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 8\\2_5_14_YO.png",
+  :type :sample}
+ {:dice 0.6964299976040252,
+  :diff-total-pred 3801,
+  :sample-pnts-missed 794,
+  :predicted-pnts-incorrect 3007,
+  :no-diff-pnts 86296,
+  :predicted-pnts-correctly 4360,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\2_5_14_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 8\\2_5_14_YO.png",
+  :type :sample}
+  
+  {:dice 0.8008323424494649,
+  :diff-total-pred 3350,
+  :sample-pnts-missed 1128,
+  :predicted-pnts-incorrect 2222,
+  :no-diff-pnts 95655,
+  :predicted-pnts-correctly 6735,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\2_5_15_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_15_YO.png",
+  :type :pred}
+ {:dice 0.7989665945686133,
+  :diff-total-pred 3346,
+  :sample-pnts-missed 1038,
+  :predicted-pnts-incorrect 2308,
+  :no-diff-pnts 95745,
+  :predicted-pnts-correctly 6649,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\2_5_15_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_15_YO.png",
+  :type :pred}
+ {:dice 0.7188474357595958,
+  :diff-total-pred 5230,
+  :sample-pnts-missed 2959,
+  :predicted-pnts-incorrect 2271
+,
+  :no-diff-pnts 93824,
+  :predicted-pnts-correctly 6686,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\2_5_15_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_15_YO.png",
+  :type :pred}
+ {:dice 0.895305466237942,
+  :diff-total-pred 1628,
+  :sample-pnts-missed 726,
+  :predicted-pnts-incorrect 902,
+  :no-diff-pnts 97151,
+  :predicted-pnts-correctly 6961,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\2_5_15_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\2_5_15_YO.png",
+  :type :sample}
+ {:dice 0.8295638126009693,
+  :diff-total-pred 2954,
+  :sample-pnts-missed 2456,
+  :predicted-pnts-incorrect 498,
+  :no-diff-pnts 95597,
+  :predicted-pnts-correctly 7189,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\
+Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\2_5_15_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\2_5_15_YO.png",
+  :type :sample}
+ {:dice 0.8448709161526159,
+  :diff-total-pred 2716,
+  :sample-pnts-missed 2249,
+  :predicted-pnts-incorrect 467,
+  :no-diff-pnts 95628,
+  :predicted-pnts-correctly 7396,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\2_5_15_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\2_5_15_YO.png",
+  :type :sample}
+  
+  {:dice 0.7382819206776169,
+  :diff-total-pred 4573,
+  :sample-pnts-missed 433,
+  :predicted-pnts-incorrect 4140,
+  :no-diff-pnts 97491,
+  :predicted-pnts-correctly 6450,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 9\\2_5_16_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_16_YO.png",
+  :type :pred}
+ {:dice 0.7184682047078113,
+  :diff-total-pred 4808,
+  :sample-pnts-missed 353,
+  :predicted-pnts-incorrect 4455,
+  :no-diff-pnts 97571,
+  :predicted-pnts-correctly 6135,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\2_5_16_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_16_YO.png",
+  :type :pred}
+ {:dice 0.7483064095883273,
+  :diff-total-pred 4347,
+  :sample-pnts-missed 219,
+  :predicted-pnts-incorrect 4128
+,
+  :no-diff-pnts 97705,
+  :predicted-pnts-correctly 6462,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\2_5_16_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_16_YO.png",
+  :type :pred}
+ {:dice 0.900605788647072,
+  :diff-total-pred 1329,
+  :sample-pnts-missed 467,
+  :predicted-pnts-incorrect 862,
+  :no-diff-pnts 101164,
+  :predicted-pnts-correctly 6021,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 9\\2_5_16_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\2_5_16_YO.png",
+  :type :sample}
+ {:dice 0.8851089680309819,
+  :diff-total-pred 1513,
+  :sample-pnts-missed 853,
+  :predicted-pnts-incorrect 660,
+  :no-diff-pnts 101173,
+  :predicted-pnts-correctly 5828,
+  :sample-loc
+  "C:\\Users\\erudi\\Deskt
+op\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\2_5_16_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\2_5_16_YO.png",
+  :type :sample}
+ {:dice 0.8705396638159835,
+  :diff-total-pred 1756,
+  :sample-pnts-missed 777,
+  :predicted-pnts-incorrect 979,
+  :no-diff-pnts 100854,
+  :predicted-pnts-correctly 5904,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 9\\2_5_16_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\2_5_16_YO.png",
+  :type :sample}
+  {:dice 0.7945145604545703,
+  :diff-total-pred 3761,
+  :sample-pnts-missed 502,
+  :predicted-pnts-incorrect 3259,
+  :no-diff-pnts 107989,
+  :predicted-pnts-correctly 7271,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\2_5_17_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_17_YO.png",
+  :type :pred}
+ {:dice 0.7849644429393837,
+  :diff-total-pred 3810,
+  :sample-pnts-missed 234,
+  :predicted-pnts-incorrect 3576,
+  :no-diff-pnts 108257,
+  :predicted-pnts-correctly 6954,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\2_5_17_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_17_YO.png",
+  :type :pred}
+ {:dice 0.7738042020563254,
+  :diff-total-pred 4048,
+  :sample-pnts-missed 442,
+  :predicted-pnts-incorrect 3606
+,
+  :no-diff-pnts 108049,
+  :predicted-pnts-correctly 6924,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\2_5_17_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_17_YO.png",
+  :type :pred}
+ {:dice 0.9012766526301718,
+  :diff-total-pred 1477,
+  :sample-pnts-missed 446,
+  :predicted-pnts-incorrect 1031,
+  :no-diff-pnts 110802,
+  :predicted-pnts-correctly 6742,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\2_5_17_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\2_5_17_YO.png",
+  :type :sample}
+ {:dice 0.9036690944070359,
+  :diff-total-pred 1402,
+  :sample-pnts-missed 790,
+  :predicted-pnts-incorrect 612,
+  :no-diff-pnts 111043,
+  :predicted-pnts-correctly 6576,
+  :sample-loc
+  "C:\\Users\\erudi\\D
+esktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\2_5_17_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\2_5_17_YO.png",
+  :type :sample}
+ {:dice 0.8890943919677654,
+  :diff-total-pred 1679,
+  :sample-pnts-missed 636,
+  :predicted-pnts-incorrect 1043,
+  :no-diff-pnts 110612,
+  :predicted-pnts-correctly 6730,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\2_5_17_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\2_5_17_YO.png",
+  :type :sample}
+  
+  {:dice 0.8694592712926433,
+  :diff-total-pred 2250,
+  :sample-pnts-missed 592,
+  :predicted-pnts-incorrect 1658,
+  :no-diff-pnts 93503,
+  :predicted-pnts-correctly 7493,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\2_5_18_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_18_YO.png",
+  :type :pred}
+ {:dice 0.8984074052779853,
+  :diff-total-pred 1767,
+  :sample-pnts-missed 429,
+  :predicted-pnts-incorrect 1338,
+  :no-diff-pnts 93666,
+  :predicted-pnts-correctly 7813,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\2_5_18_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_18_YO.png",
+  :type :pred}
+ {:dice 0.8623735158214892,
+  :diff-total-pred 2353,
+  :sample-pnts-missed 574,
+  :predicted-pnts-incorrect 1779
+,
+  :no-diff-pnts 93521,
+  :predicted-pnts-correctly 7372,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\2_5_18_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_18_YO.png",
+  :type :pred}
+ {:dice 0.9143137134807374,
+  :diff-total-pred 1399,
+  :sample-pnts-missed 778,
+  :predicted-pnts-incorrect 621,
+  :no-diff-pnts 94383,
+  :predicted-pnts-correctly 7464,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\2_5_18_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\2_5_18_YO.png",
+  :type :sample}
+ {:dice 0.9094390906844576,
+  :diff-total-pred 1466,
+  :sample-pnts-missed 585,
+  :predicted-pnts-incorrect 881,
+  :no-diff-pnts 94419,
+  :predicted-pnts-correctly 7361,
+  :sample-loc
+  "C:\\Users\\erudi\\Deskt
+op\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\2_5_18_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\2_5_18_YO.png",
+  :type :sample}
+ {:dice 0.9204665959703076,
+  :diff-total-pred 1275,
+  :sample-pnts-missed 568,
+  :predicted-pnts-incorrect 707,
+  :no-diff-pnts 94593,
+  :predicted-pnts-correctly 7378,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\2_5_18_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 10\\2_5_18_YO.png",
+  :type :sample}
+  
+  {:dice 0.8475364504776269,
+  :diff-total-pred 2426,
+  :sample-pnts-missed 858,
+  :predicted-pnts-incorrect 1568,
+  :no-diff-pnts 83784,
+  :predicted-pnts-correctly 6743,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 9\\2_5_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_19_YO.png",
+  :type :pred}
+ {:dice 0.770745044429255,
+  :diff-total-pred 3354,
+  :sample-pnts-missed 681,
+  :predicted-pnts-incorrect 2673,
+  :no-diff-pnts 83961,
+  :predicted-pnts-correctly 5638,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 8\\2_5_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_19_YO.png",
+  :type :pred}
+ {:dice 0.8487394957983193,
+  :diff-total-pred 2628,
+  :sample-pnts-missed 1690,
+  :predicted-pnts-incorrect 938,
+  :no-diff-pnts 82952,
+  :predicted-pnts-correctly 7373,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\2_5_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_19_YO.png",
+  :type :pred}
+ {:dice 0.8577586206896552,
+  :diff-total-pred 1980,
+  :sample-pnts-missed 349,
+  :predicted-pnts-incorrect 1631,
+  :no-diff-pnts 85003,
+  :predicted-pnts-correctly 5970,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 9\\2_5_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 8\\2_5_19_YO.png",
+  :type :sample}
+ {:dice 0.808477441164998,
+  :diff-total-pred 2946,
+  :sample-pnts-missed 2845,
+  :predicted-pnts-incorrect 101,
+  :no-diff-pnts 83789,
+  :predicted-pnts-correctly 6218,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\T
+hesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 8\\2_5_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\2_5_19_YO.png",
+  :type :sample}
+ {:dice 0.8873019683149304,
+  :diff-total-pred 1878,
+  :sample-pnts-missed 1670,
+  :predicted-pnts-incorrect 208,
+  :no-diff-pnts 83682,
+  :predicted-pnts-correctly 7393,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 9\\2_5_19_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\2_5_19_YO.png",
+  :type :sample}
+  
+  {:dice 0.851861802160013,
+  :diff-total-pred 2757,
+  :sample-pnts-missed 673,
+  :predicted-pnts-incorrect 2084,
+  :no-diff-pnts 92996,
+  :predicted-pnts-correctly 7927,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\2_5_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_20_YO.png",
+  :type :pred}
+ {:dice 0.861501050071847,
+  :diff-total-pred 2506,
+  :sample-pnts-missed 289,
+  :predicted-pnts-incorrect 2217,
+  :no-diff-pnts 93380,
+  :predicted-pnts-correctly 7794,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\2_5_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_20_YO.png",
+  :type :pred}
+ {:dice 0.8443100604727872,
+  :diff-total-pred 2832,
+  :sample-pnts-missed 500,
+  :predicted-pnts-incorrect 2332,
+
+  :no-diff-pnts 93169,
+  :predicted-pnts-correctly 7679,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\2_5_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_20_YO.png",
+  :type :pred}
+ {:dice 0.8878499070910508,
+  :diff-total-pred 1871,
+  :sample-pnts-missed 677,
+  :predicted-pnts-incorrect 1194,
+  :no-diff-pnts 94403,
+  :predicted-pnts-correctly 7406,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\2_5_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\2_5_20_YO.png",
+  :type :sample}
+ {:dice 0.9024720206616652,
+  :diff-total-pred 1586,
+  :sample-pnts-missed 841,
+  :predicted-pnts-incorrect 745,
+  :no-diff-pnts 94756,
+  :predicted-pnts-correctly 7338,
+  :sample-loc
+  "C:\\Users\\erudi\\Deskto
+p\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\2_5_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\2_5_20_YO.png",
+  :type :sample}
+ {:dice 0.8524941891650277,
+  :diff-total-pred 2475,
+  :sample-pnts-missed 1027,
+  :predicted-pnts-incorrect 1448,
+  :no-diff-pnts 94053,
+  :predicted-pnts-correctly 7152,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\2_5_20_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\2_5_20_YO.png",
+  :type :sample}
+  
+  {:dice 0.8637945630702663,
+  :diff-total-pred 2896,
+  :sample-pnts-missed 2080,
+  :predicted-pnts-incorrect 816,
+  :no-diff-pnts 80505,
+  :predicted-pnts-correctly 9183,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\2_5_21_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_21_YO.png",
+  :type :pred}
+ {:dice 0.858058690744921,
+  :diff-total-pred 3144,
+  :sample-pnts-missed 2648,
+  :predicted-pnts-incorrect 496,
+  :no-diff-pnts 79937,
+  :predicted-pnts-correctly 9503,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\2_5_21_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_21_YO.png",
+  :type :pred}
+ {:dice 0.863865719287406,
+  :diff-total-pred 2644,
+  :sample-pnts-missed 1034,
+  :predicted-pnts-incorrect 1610,
+  :no-diff-pnts 81551,
+  :predicted-pnts-correctly 8389,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\2_5_21_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\2_5_21_YO.png",
+  :type :pred}
+ {:dice 0.9091996241564876,
+  :diff-total-pred 2126,
+  :sample-pnts-missed 1507,
+  :predicted-pnts-incorrect 619,
+  :no-diff-pnts 79814,
+  :predicted-pnts-correctly 10644,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\2_5_21_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\2_5_21_YO.png",
+  :type :sample}
+ {:dice 0.8431445258181144,
+  :diff-total-pred 3384,
+  :sample-pnts-missed 328,
+  :predicted-pnts-incorrect 3056,
+  :no-diff-pnts 80105,
+  :predicted-pnts-correctly 9095,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\
+Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\2_5_21_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\2_5_21_YO.png",
+  :type :sample}
+ {:dice 0.8326404331431886,
+  :diff-total-pred 3462,
+  :sample-pnts-missed 811,
+  :predicted-pnts-incorrect 2651,
+  :no-diff-pnts 80510,
+  :predicted-pnts-correctly 8612,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\2_5_21_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\2_5_21_YO.png",
+  :type :sample}
+  
+  {:dice 0.5289911504424779,
+  :diff-total-pred 6653,
+  :sample-pnts-missed 322,
+  :predicted-pnts-incorrect 6331,
+  :no-diff-pnts 77517,
+  :predicted-pnts-correctly 3736,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\3_1_13_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\3_1_13_YO.png",
+  :type :pred}
+ {:dice 0.5636464702612562,
+  :diff-total-pred 6280,
+  :sample-pnts-missed 269,
+  :predicted-pnts-incorrect 6011,
+  :no-diff-pnts 77570,
+  :predicted-pnts-correctly 4056,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\3_1_13_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\3_1_13_YO.png",
+  :type :pred}
+ {:dice 0.5544190925780226,
+  :diff-total-pred 6796,
+  :sample-pnts-missed 957,
+  :predicted-pnts-incorrect 5839
+,
+  :no-diff-pnts 76882,
+  :predicted-pnts-correctly 4228,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\3_1_13_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\3_1_13_YO.png",
+  :type :pred}
+ {:dice 0.9051652153167123,
+  :diff-total-pred 795,
+  :sample-pnts-missed 531,
+  :predicted-pnts-incorrect 264,
+  :no-diff-pnts 83317,
+  :predicted-pnts-correctly 3794,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\3_1_13_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\3_1_13_YO.png",
+  :type :sample}
+ {:dice 0.880546792849632,
+  :diff-total-pred 1136,
+  :sample-pnts-missed 998,
+  :predicted-pnts-incorrect 138,
+  :no-diff-pnts 82583,
+  :predicted-pnts-correctly 4187,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\
+Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\3_1_13_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\3_1_13_YO.png",
+  :type :sample}
+ {:dice 0.831980958563237,
+  :diff-total-pred 1553,
+  :sample-pnts-missed 1340,
+  :predicted-pnts-incorrect 213,
+  :no-diff-pnts 82508,
+  :predicted-pnts-correctly 3845,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\3_1_13_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\3_1_13_YO.png",
+  :type :sample}
+  
+  {:dice 0.8604065374026126,
+  :diff-total-pred 2383,
+  :sample-pnts-missed 2138,
+  :predicted-pnts-incorrect 245,
+  :no-diff-pnts 86357,
+  :predicted-pnts-correctly 7344,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\3_3_14_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\3_3_14_YO.png",
+  :type :pred}
+ {:dice 0.8668036395656002,
+  :diff-total-pred 2269,
+  :sample-pnts-missed 2063,
+  :predicted-pnts-incorrect 206,
+  :no-diff-pnts 86432,
+  :predicted-pnts-correctly 7383,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\3_3_14_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\3_3_14_YO.png",
+  :type :pred}
+ {:dice 0.8312192892240887,
+  :diff-total-pred 2954,
+  :sample-pnts-missed 2639,
+  :predicted-pnts-incorrect 315,
+
+  :no-diff-pnts 85856,
+  :predicted-pnts-correctly 7274,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\3_3_14_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\3_3_14_YO.png",
+  :type :pred}
+ {:dice 0.933748943364328,
+  :diff-total-pred 1254,
+  :sample-pnts-missed 609,
+  :predicted-pnts-incorrect 645,
+  :no-diff-pnts 85993,
+  :predicted-pnts-correctly 8837,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\3_3_14_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\3_3_14_YO.png",
+  :type :sample}
+ {:dice 0.931039826437316,
+  :diff-total-pred 1335,
+  :sample-pnts-missed 901,
+  :predicted-pnts-incorrect 434,
+  :no-diff-pnts 85737,
+  :predicted-pnts-correctly 9012,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Th
+esis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 3\\3_3_14_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\3_3_14_YO.png",
+  :type :sample}
+ {:dice 0.925599381283836,
+  :diff-total-pred 1443,
+  :sample-pnts-missed 937,
+  :predicted-pnts-incorrect 506,
+  :no-diff-pnts 85665,
+  :predicted-pnts-correctly 8976,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 4\\3_3_14_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 2\\3_3_14_YO.png",
+  :type :sample}
+  
+  {:dice 0.8598707574081621,
+  :diff-total-pred 2407,
+  :sample-pnts-missed 1916,
+  :predicted-pnts-incorrect 491,
+  :no-diff-pnts 81474,
+  :predicted-pnts-correctly 7385,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\3_3_15_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\3_3_15_YO.png",
+  :type :pred}
+ {:dice 0.9237118264355618,
+  :diff-total-pred 1294,
+  :sample-pnts-missed 1252,
+  :predicted-pnts-incorrect 42,
+  :no-diff-pnts 82138,
+  :predicted-pnts-correctly 7834,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\3_3_15_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\3_3_15_YO.png",
+  :type :pred}
+ {:dice 0.9049810661229246,
+  :diff-total-pred 1631,
+  :sample-pnts-missed 1522,
+  :predicted-pnts-incorrect 109
+,
+  :no-diff-pnts 81868,
+  :predicted-pnts-correctly 7767,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\3_3_15_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\3_3_15_YO.png",
+  :type :pred}
+ {:dice 0.8987871865992277,
+  :diff-total-pred 1861,
+  :sample-pnts-missed 823,
+  :predicted-pnts-incorrect 1038,
+  :no-diff-pnts 81142,
+  :predicted-pnts-correctly 8263,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\3_3_15_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\3_3_15_YO.png",
+  :type :sample}
+ {:dice 0.9386666666666666,
+  :diff-total-pred 1127,
+  :sample-pnts-missed 665,
+  :predicted-pnts-incorrect 462,
+  :no-diff-pnts 81515,
+  :predicted-pnts-correctly 8624,
+  :sample-loc
+  "C:\\Users\\erudi\\Deskt
+op\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 11\\3_3_15_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\3_3_15_YO.png",
+  :type :sample}
+ {:dice 0.9082302313071544,
+  :diff-total-pred 1706,
+  :sample-pnts-missed 847,
+  :predicted-pnts-incorrect 859,
+  :no-diff-pnts 81118,
+  :predicted-pnts-correctly 8442,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 12\\3_3_15_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 1\\3_3_15_YO.png",
+  :type :sample}
+  
+  {:dice 0.8713623281100096,
+  :diff-total-pred 3218,
+  :sample-pnts-missed 862,
+  :predicted-pnts-incorrect 2356,
+  :no-diff-pnts 84691,
+  :predicted-pnts-correctly 10899,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\4_3_2_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\4_3_2_YO.png",
+  :type :pred}
+ {:dice 0.851082764758232,
+  :diff-total-pred 4016,
+  :sample-pnts-missed 2237,
+  :predicted-pnts-incorrect 1779,
+  :no-diff-pnts 83316,
+  :predicted-pnts-correctly 11476,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\4_3_2_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\4_3_2_YO.png",
+  :type :pred}
+ {:dice 0.857286315708161,
+  :diff-total-pred 3695,
+  :sample-pnts-missed 1538,
+  :predicted-pnts-incorrect 2157,
+  :no-diff-pnts 84015,
+  :predicted-pnts-correctly 11098,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\4_3_2_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume Analysis\\4_3_2_YO.png",
+  :type :pred}
+ {:dice 0.913715945670095,
+  :diff-total-pred 2198,
+  :sample-pnts-missed 2075,
+  :predicted-pnts-incorrect 123,
+  :no-diff-pnts 84972,
+  :predicted-pnts-correctly 11638,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\4_3_2_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\4_3_2_YO.png",
+  :type :sample}
+ {:dice 0.9157083760294508,
+  :diff-total-pred 2221,
+  :sample-pnts-missed 572,
+  :predicted-pnts-incorrect 1649,
+  :no-diff-pnts 84523,
+  :predicted-pnts-correctly 12064,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Th
+esis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 6\\4_3_2_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\4_3_2_YO.png",
+  :type :sample}
+ {:dice 0.8847809156863549,
+  :diff-total-pred 2811,
+  :sample-pnts-missed 1843,
+  :predicted-pnts-incorrect 968,
+  :no-diff-pnts 85204,
+  :predicted-pnts-correctly 10793,
+  :sample-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 7\\4_3_2_YO.png",
+  :predicted-loc
+  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\volume student\\STUDENT 5\\4_3_2_YO.png",
+  :type :sample}
+  
+  
+  
+  
+  ]

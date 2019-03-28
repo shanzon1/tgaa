@@ -9,6 +9,11 @@
 
 (def black-max -16480096)
 
+(def quick-path  "C:\\Users\\erudi\\Desktop\\Thesis End Game\\Sampling\\Student Sampling\\")
+
+(defn file-to-path-only [path]
+  (apply str  (interpose "\\" (butlast (clojure.string/split path #"\\" )))))
+
 (defn get-sample-image []
   (image/get-image 
     (str (gui/sys-view-ref "Select sample image (manual)" :file))))
@@ -53,13 +58,48 @@
       
 (defn perform-dice-analysis []
   (let [
-        sample-loc (str (gui/sys-view-ref "Select sample image" :file ))
-        sample (image/get-image sample-loc)
-        predicted-loc (str (gui/sys-view-ref "Select predicted image" :file sample-loc))
+        sample-loc-1 (str (gui/sys-view-ref "Select sample image one" :file quick-path))
+        _ (println sample-loc-1)
+        sample-1 (image/get-image sample-loc-1)
+        sample-loc-2 (str (gui/sys-view-ref "Select sample image two" :file (file-to-path-only sample-loc-1)))
+        _ (println sample-loc-2)
+        sample-2 (image/get-image sample-loc-2)
+        sample-loc-3 (str (gui/sys-view-ref "Select sample image three" :file (file-to-path-only sample-loc-2)))
+        _ (println sample-loc-3)
+        sample-3 (image/get-image sample-loc-3)
+        predicted-loc (str (gui/sys-view-ref "Select predicted image" :file (file-to-path-only sample-loc-3)))
+        _ (println predicted-loc "\n\n\n")
         predicted (image/get-image predicted-loc)]
-       {:results (compare-color  predicted sample )
-        :sample-loc sample-loc
-        :predicted-loc predicted-loc}))
+       [{:results (compare-color  predicted sample-1 )
+         :sample-loc sample-loc-1
+         :predicted-loc predicted-loc
+         :type :pred}
+        
+        {:results (compare-color  predicted sample-2 )
+         :sample-loc sample-loc-2
+         :predicted-loc predicted-loc
+         :type :pred}
+        
+        {:results (compare-color  predicted sample-3 )
+         :sample-loc sample-loc-3
+         :predicted-loc predicted-loc
+         :type :pred}
+        
+        {:results (compare-color  sample-1 sample-2 )
+         :sample-loc sample-loc-1
+         :predicted-loc sample-loc-2
+         :type :sample}
+        
+        {:results (compare-color  sample-2 sample-3 )
+         :sample-loc sample-loc-2
+         :predicted-loc sample-loc-3
+         :type :sample}
+        
+        {:results (compare-color  sample-1 sample-3 )
+         :sample-loc sample-loc-1
+         :predicted-loc sample-loc-3
+         :type :sample}
+        ]))
 
 (defn compute-dice-metric [dm-data]
   (let [pix-res (:results  dm-data)
@@ -78,4 +118,4 @@
         (dissoc dm-data :results)))))
 
 (defn dice-metric []
-  (compute-dice-metric   (perform-dice-analysis)))
+  (map #(compute-dice-metric %)   (perform-dice-analysis)))

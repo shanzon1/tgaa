@@ -73,3 +73,7 @@
 
 (defn draw-string [string graphic x y]
   (. graphic drawString string x y))
+
+(defn save-as-png [image full-path]
+  (let [file-name  (str (first (clojure.string/split full-path #"\.")) ".png")]
+        (mikera.image.core/save image  file-name)))

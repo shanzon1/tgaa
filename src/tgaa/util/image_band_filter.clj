@@ -21,6 +21,13 @@
 
 ;(def t2 (compare-color (shared/image-ref)))
 
+(defn image-to-binary-yw [full-path target-folder]
+  (let [ file-in-name (last (clojure.string/split full-path  #"\\"))
+        file-in-parsed (clojure.string/split file-in-name #"\.")
+        file-out (str target-folder "\\" (first file-in-parsed) "_YO." "png")
+        conv-image (tgaa.struct.image/get-image full-path)
+        _ (compare-color conv-image)
+        _ (mikera.image.core/save conv-image  file-out)]))
 
 (defn convert-yellow-only []
   (let [conv-files (tgaa.util.gui/sys-folder-all-files "Parent folder to convert all images.")
@@ -28,14 +35,11 @@
         (loop [file (rest conv-files)]
           (if (empty? file)
             (println "complete")
-            (let [full-path (str (first file))
-                  file-in-name (last (clojure.string/split full-path  #"\\"))
-                  file-in-parsed (clojure.string/split file-in-name #"\.")
-                  file-out (str target-folder "\\" (first file-in-parsed) "_YO." "png")
-                  _ (println "processing file " (count file) " Named "  full-path)
-                  conv-image (tgaa.struct.image/get-image full-path)
-                  _ (compare-color conv-image)
-                  _ (mikera.image.core/save conv-image  file-out)
-                  ]
+            (do (image-to-binary-yw (str (first file)) target-folder)
               (recur (rest file)))))))
 
+(defn convert-yellow-image []
+  (let [conv-file (str (tgaa.util.gui/sys-view-ref "Parent folder to convert all images." :file))
+        helper-path (apply str  (interpose "\\" (butlast (clojure.string/split conv-file #"\\" ))))
+        target-folder (str (tgaa.util.gui/sys-view-ref "Target parent folder." :folder helper-path))]
+             (image-to-binary-yw conv-file target-folder)))
